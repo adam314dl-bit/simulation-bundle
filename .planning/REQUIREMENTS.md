@@ -14,7 +14,7 @@ Requirements for initial release. Each maps to roadmap phases.
 - [x] **INFRA-03**: Package.json with subpath exports supporting tree-shaking and tier separation ($29/$49)
 - [x] **INFRA-04**: Tailwind v4 compiled to static CSS at build time with `--sim-*` CSS custom properties for theming
 - [x] **INFRA-05**: Peer dependencies (React, Zustand, Recharts, D3-force) externalized correctly in build output
-- [ ] **INFRA-06**: Storybook 10 configured with Vite builder for interactive component documentation
+- [x] **INFRA-06**: Storybook 10 configured with Vite builder for interactive component documentation
 - [x] **INFRA-07**: Shared TypeScript type definitions exported from `src/types/index.ts`
 
 ### Core
@@ -128,7 +128,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | INFRA-03 | Phase 1 | Complete |
 | INFRA-04 | Phase 1 | Complete |
 | INFRA-05 | Phase 1 | Complete |
-| INFRA-06 | Phase 1 | Pending |
+| INFRA-06 | Phase 1 | Complete |
 | INFRA-07 | Phase 1 | Complete |
 | CORE-01 | Phase 1 | Complete |
 | CORE-02 | Phase 1 | Complete |

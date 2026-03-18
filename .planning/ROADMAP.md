@@ -127,7 +127,7 @@ Note: Phases 2, 3, 4, and 5 all depend on Phase 1 but are independent of each ot
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Infrastructure + Core Engine | 0/6 | In progress | - |
+| 1. Infrastructure + Core Engine | 3/6 | In Progress|  |
 | 2. Canvas Rendering | 0/? | Not started | - |
 | 3. Controls | 0/? | Not started | - |
 | 4. Advanced Rendering | 0/? | Not started | - |
