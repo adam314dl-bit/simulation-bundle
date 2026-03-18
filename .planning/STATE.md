@@ -2,16 +2,16 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: in-progress
-stopped_at: Completed 02-01-PLAN.md
-last_updated: "2026-03-18T16:00:42Z"
-last_activity: 2026-03-18 -- Completed 02-01 Foundation (types, viewport, color ramps)
+status: executing
+stopped_at: Completed 02-02-PLAN.md
+last_updated: "2026-03-18T16:07:16.772Z"
+last_activity: 2026-03-18 -- Completed 02-02 SimCanvas (canvas, pan/zoom, touch, rAF)
 progress:
   total_phases: 6
   completed_phases: 1
   total_plans: 10
-  completed_plans: 7
-  percent: 70
+  completed_plans: 8
+  percent: 80
 ---
 
 # Project State
@@ -26,28 +26,28 @@ See: .planning/PROJECT.md (updated 2026-03-18)
 ## Current Position
 
 Phase: 2 of 6 (Canvas Rendering)
-Plan: 1 of 4 in current phase
+Plan: 2 of 4 in current phase
 Status: In Progress
-Last activity: 2026-03-18 -- Completed 02-01 Foundation (types, viewport, color ramps)
+Last activity: 2026-03-18 -- Completed 02-02 SimCanvas (canvas, pan/zoom, touch, rAF)
 
-Progress: [███████░░░] 70%
+Progress: [████████░░] 80%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 7
+- Total plans completed: 8
 - Average duration: 3min
-- Total execution time: 0.36 hours
+- Total execution time: 0.40 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 01-infrastructure | 6/6 | 19min | 3min |
-| 02-canvas-rendering | 1/4 | 3min | 3min |
+| 02-canvas-rendering | 2/4 | 6min | 3min |
 
 **Recent Trend:**
-- Last 5 plans: 01-04 (1min), 01-05 (3min), 01-06 (4min), 02-01 (3min)
+- Last 5 plans: 01-04 (1min), 01-05 (3min), 01-06 (4min), 02-01 (3min), 02-02 (3min)
 - Trend: stable
 
 *Updated after each plan completion*
@@ -57,6 +57,7 @@ Progress: [███████░░░] 70%
 | Phase 01 P05 | 3min | 2 tasks | 5 files |
 | Phase 01 P06 | 4min | 2 tasks | 2 files |
 | Phase 02 P01 | 3min | 3 tasks | 9 files |
+| Phase 02 P02 | 3min | 2 tasks | 2 files |
 
 ## Accumulated Context
 
@@ -82,6 +83,9 @@ Recent decisions affecting current work:
 - [Phase 02-01]: Viridis/inferno/plasma interpolated from 21 canonical matplotlib key samples to 256-entry LUTs
 - [Phase 02-01]: Category10 uses floor(index/25.6) binning for 10 discrete D3 categorical colors
 - [Phase 02-01]: Viewport zoom factor 1.08x per step, clamped [0.1, 20], momentum damping 0.92
+- [Phase 02]: PointerEvents for unified mouse/touch/pen -- single code path for pan, pinch-zoom
+- [Phase 02]: Viewport in useRef (not state) -- avoids re-renders on every pointer move
+- [Phase 02]: Non-passive wheel addEventListener -- React onWheel uses passive listeners, preventing preventDefault
 
 ### Pending Todos
 
@@ -95,6 +99,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-18T16:00:42Z
-Stopped at: Completed 02-01-PLAN.md
-Resume file: .planning/phases/02-canvas-rendering/02-01-SUMMARY.md
+Last session: 2026-03-18T16:07:16.770Z
+Stopped at: Completed 02-02-PLAN.md
+Resume file: None

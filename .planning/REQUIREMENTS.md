@@ -28,7 +28,7 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Rendering
 
-- [ ] **REND-01**: SimCanvas provides a base canvas element with mouse wheel zoom (cursor-centered), click-drag pan, touch pinch-zoom, and devicePixelRatio handling
+- [x] **REND-01**: SimCanvas provides a base canvas element with mouse wheel zoom (cursor-centered), click-drag pan, touch pinch-zoom, and devicePixelRatio handling
 - [x] **REND-02**: SimCanvas exposes Viewport with screenToWorld/worldToScreen coordinate transforms via onDraw callback
 - [ ] **REND-03**: GridRenderer renders 2D grid of color-mapped cells with configurable cell size, borders, cell highlighting, click and hover handlers
 - [ ] **REND-04**: GridRenderer achieves 500×500 grid at 30fps via dirty-rect optimization (only redraw changed cells)
@@ -139,7 +139,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | UTIL-02 | Phase 1 | Complete |
 | THEME-01 | Phase 1 | Complete |
 | THEME-02 | Phase 1 | Complete |
-| REND-01 | Phase 2 | Pending |
+| REND-01 | Phase 2 | Complete |
 | REND-02 | Phase 2 | Complete |
 | REND-03 | Phase 2 | Pending |
 | REND-04 | Phase 2 | Pending |
