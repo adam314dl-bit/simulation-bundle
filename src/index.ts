@@ -1,5 +1,6 @@
 // sim-kit root barrel — re-exports all layers for convenient prototyping
 // For production tree-shaking, import from subpaths: 'sim-kit/core', 'sim-kit/rendering', etc.
+import './theme/index.css';
 export * from './core/index';
 export * from './rendering/index';
 export * from './controls/index';
