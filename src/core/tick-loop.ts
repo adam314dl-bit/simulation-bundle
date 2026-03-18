@@ -18,14 +18,10 @@ export function startTickLoop<TEntities>(
   keepRunning?: boolean
 ): () => void {
   let rafId: number;
-  let lastTime: number | null = null;
+  let lastTime = 0;
   let accumulator = 0;
 
   const loop = (timestamp: number) => {
-    if (lastTime === null) {
-      lastTime = timestamp;
-    }
-
     const rawDelta = timestamp - lastTime;
     lastTime = timestamp;
 
@@ -57,7 +53,7 @@ export function startTickLoop<TEntities>(
   const onVisibilityChange = () => {
     if (document.hidden && !keepRunning) {
       store.setState({ running: false });
-      lastTime = null;
+      lastTime = 0;
       accumulator = 0;
     }
   };
