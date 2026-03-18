@@ -3,15 +3,15 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 02-02-PLAN.md
-last_updated: "2026-03-18T16:07:16.772Z"
-last_activity: 2026-03-18 -- Completed 02-02 SimCanvas (canvas, pan/zoom, touch, rAF)
+stopped_at: Completed 02-03-PLAN.md
+last_updated: "2026-03-18T16:11:46.048Z"
+last_activity: 2026-03-18 -- Completed 02-03 GridRenderer (dirty-rect, highlights, hit testing)
 progress:
   total_phases: 6
   completed_phases: 1
   total_plans: 10
-  completed_plans: 8
-  percent: 80
+  completed_plans: 9
+  percent: 90
 ---
 
 # Project State
@@ -26,11 +26,11 @@ See: .planning/PROJECT.md (updated 2026-03-18)
 ## Current Position
 
 Phase: 2 of 6 (Canvas Rendering)
-Plan: 2 of 4 in current phase
+Plan: 3 of 4 in current phase
 Status: In Progress
-Last activity: 2026-03-18 -- Completed 02-02 SimCanvas (canvas, pan/zoom, touch, rAF)
+Last activity: 2026-03-18 -- Completed 02-03 GridRenderer (dirty-rect, highlights, hit testing)
 
-Progress: [████████░░] 80%
+Progress: [█████████░] 90%
 
 ## Performance Metrics
 
@@ -58,6 +58,7 @@ Progress: [████████░░] 80%
 | Phase 01 P06 | 4min | 2 tasks | 2 files |
 | Phase 02 P01 | 3min | 3 tasks | 9 files |
 | Phase 02 P02 | 3min | 2 tasks | 2 files |
+| Phase 02 P03 | 2min | 2 tasks | 2 files |
 
 ## Accumulated Context
 
@@ -86,6 +87,9 @@ Recent decisions affecting current work:
 - [Phase 02]: PointerEvents for unified mouse/touch/pen -- single code path for pan, pinch-zoom
 - [Phase 02]: Viewport in useRef (not state) -- avoids re-renders on every pointer move
 - [Phase 02]: Non-passive wheel addEventListener -- React onWheel uses passive listeners, preventing preventDefault
+- [Phase 02]: Offscreen canvas for drawImage -- putImageData ignores transforms, drawImage respects ctx.setTransform
+- [Phase 02]: findDirtyIndices exported as pure function for testability of dirty-rect logic
+- [Phase 02]: 30% dirty-cell threshold triggers full repaint over incremental (more efficient for large changes)
 
 ### Pending Todos
 
@@ -99,6 +103,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-18T16:07:16.770Z
-Stopped at: Completed 02-02-PLAN.md
+Last session: 2026-03-18T16:11:46.046Z
+Stopped at: Completed 02-03-PLAN.md
 Resume file: None

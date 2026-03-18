@@ -30,8 +30,8 @@ Requirements for initial release. Each maps to roadmap phases.
 
 - [x] **REND-01**: SimCanvas provides a base canvas element with mouse wheel zoom (cursor-centered), click-drag pan, touch pinch-zoom, and devicePixelRatio handling
 - [x] **REND-02**: SimCanvas exposes Viewport with screenToWorld/worldToScreen coordinate transforms via onDraw callback
-- [ ] **REND-03**: GridRenderer renders 2D grid of color-mapped cells with configurable cell size, borders, cell highlighting, click and hover handlers
-- [ ] **REND-04**: GridRenderer achieves 500×500 grid at 30fps via dirty-rect optimization (only redraw changed cells)
+- [x] **REND-03**: GridRenderer renders 2D grid of color-mapped cells with configurable cell size, borders, cell highlighting, click and hover handlers
+- [x] **REND-04**: GridRenderer achieves 500×500 grid at 30fps via dirty-rect optimization (only redraw changed cells)
 - [ ] **REND-05**: ParticleRenderer uses WebGL2 instanced rendering with interleaved Float32Array input, configurable point size, and color ramp texture
 - [ ] **REND-06**: ParticleRenderer supports trail effect via alpha fade overlay and additive/normal blending modes
 - [ ] **REND-07**: ParticleRenderer achieves 100k particles at 60fps and falls back to Canvas2D if WebGL2 unavailable
@@ -141,8 +141,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | THEME-02 | Phase 1 | Complete |
 | REND-01 | Phase 2 | Complete |
 | REND-02 | Phase 2 | Complete |
-| REND-03 | Phase 2 | Pending |
-| REND-04 | Phase 2 | Pending |
+| REND-03 | Phase 2 | Complete |
+| REND-04 | Phase 2 | Complete |
 | REND-11 | Phase 2 | Pending |
 | UTIL-01 | Phase 2 | Complete |
 | CTRL-01 | Phase 3 | Pending |
