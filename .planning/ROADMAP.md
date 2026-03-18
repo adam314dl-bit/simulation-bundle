@@ -51,11 +51,13 @@ Plans:
   3. GridRenderer responds to cell click and hover events, supports configurable cell sizes and borders, and cell highlighting
   4. LayerStack composites multiple rendering layers with correct z-ordering, and its SVG annotation overlay supports rect and lasso selection modes
   5. Six built-in color ramps (viridis, inferno, plasma, coolwarm, terrain, category10) are available as 256-entry lookup tables and produce correct color mappings
-**Plans**: TBD
+**Plans**: 4 plans
 
 Plans:
-- [ ] 02-01: TBD
-- [ ] 02-02: TBD
+- [ ] 02-01-PLAN.md — Test scaffolds + rendering types + Viewport + color ramps (Wave 0 foundation)
+- [ ] 02-02-PLAN.md — SimCanvas component (pan/zoom, rAF loop, coordinate transforms)
+- [ ] 02-03-PLAN.md — GridRenderer (dirty-rect optimization, cell interaction, color mapping)
+- [ ] 02-04-PLAN.md — LayerStack (compositing, SVG selection overlay) + barrel exports
 
 ### Phase 3: Controls
 **Goal**: Users can control simulation playback, adjust parameters via auto-generated UI, scrub through simulation history, and switch between parameter presets
@@ -128,7 +130,7 @@ Note: Phases 2, 3, 4, and 5 all depend on Phase 1 but are independent of each ot
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Infrastructure + Core Engine | 6/6 | Complete   | 2026-03-18 |
-| 2. Canvas Rendering | 0/? | Not started | - |
+| 2. Canvas Rendering | 0/4 | Not started | - |
 | 3. Controls | 0/? | Not started | - |
 | 4. Advanced Rendering | 0/? | Not started | - |
 | 5. Data Visualization | 0/? | Not started | - |
