@@ -12,7 +12,7 @@ This roadmap delivers an 18-component React library for building interactive sim
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Infrastructure + Core Engine** - Build system, theming, SimulationProvider, tick loop, history, and shared types
+- [x] **Phase 1: Infrastructure + Core Engine** - Build system, theming, SimulationProvider, tick loop, history, and shared types (completed 2026-03-18)
 - [ ] **Phase 2: Canvas Rendering** - SimCanvas with pan/zoom, GridRenderer with dirty-rect optimization, color ramps, and layer compositing
 - [ ] **Phase 3: Controls** - ParameterPanel, TimelineControl, PlaybackBar, and PresetSelector
 - [ ] **Phase 4: Advanced Rendering** - WebGL2 ParticleRenderer and D3-force ForceGraph with all interaction modes
@@ -127,7 +127,7 @@ Note: Phases 2, 3, 4, and 5 all depend on Phase 1 but are independent of each ot
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Infrastructure + Core Engine | 5/6 | In Progress|  |
+| 1. Infrastructure + Core Engine | 6/6 | Complete   | 2026-03-18 |
 | 2. Canvas Rendering | 0/? | Not started | - |
 | 3. Controls | 0/? | Not started | - |
 | 4. Advanced Rendering | 0/? | Not started | - |
