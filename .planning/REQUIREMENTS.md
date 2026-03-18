@@ -38,7 +38,7 @@ Requirements for initial release. Each maps to roadmap phases.
 - [ ] **REND-08**: ForceGraph uses D3-force for layout computation with React-managed SVG rendering (no D3 DOM manipulation)
 - [ ] **REND-09**: ForceGraph supports interactive node dragging, hover/click handlers, configurable forces (charge, linkDistance, centerStrength, collisionRadius)
 - [ ] **REND-10**: ForceGraph auto-pauses simulation when stable (alpha < 0.001) and supports optional Canvas2D mode for >500 nodes
-- [ ] **REND-11**: LayerStack composites multiple rendering layers with absolute positioning and z-index, plus SVG annotation overlay with selection modes (rect, lasso)
+- [x] **REND-11**: LayerStack composites multiple rendering layers with absolute positioning and z-index, plus SVG annotation overlay with selection modes (rect, lasso)
 
 ### Controls
 
@@ -143,7 +143,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | REND-02 | Phase 2 | Complete |
 | REND-03 | Phase 2 | Complete |
 | REND-04 | Phase 2 | Complete |
-| REND-11 | Phase 2 | Pending |
+| REND-11 | Phase 2 | Complete |
 | UTIL-01 | Phase 2 | Complete |
 | CTRL-01 | Phase 3 | Pending |
 | CTRL-02 | Phase 3 | Pending |
