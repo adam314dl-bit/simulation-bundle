@@ -1,31 +1,69 @@
 {
-  "name": "simulation-bundle",
+  "name": "sim-kit",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "18-component React library for building interactive simulation interfaces",
+  "type": "module",
+  "files": ["dist"],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "sideEffects": ["*.css"],
+  "exports": {
+    ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" },
+    "./core": { "types": "./dist/core/index.d.ts", "import": "./dist/core/index.js" },
+    "./rendering": { "types": "./dist/rendering/index.d.ts", "import": "./dist/rendering/index.js" },
+    "./controls": { "types": "./dist/controls/index.d.ts", "import": "./dist/controls/index.js" },
+    "./data": { "types": "./dist/data/index.d.ts", "import": "./dist/data/index.js" },
+    "./demos": { "types": "./dist/demos/index.d.ts", "import": "./dist/demos/index.js" },
+    "./style.css": "./dist/style.css"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "vite build",
+    "typecheck": "tsc -p tsconfig.build.json --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "dependencies": {
+    "zustand": "^5.0.12",
+    "recharts": "^3.8.0",
+    "d3-force": "^3.0.0",
+    "d3-quadtree": "^3.0.1",
+    "clsx": "^2.1.0"
+  },
+  "devDependencies": {
+    "vite": "~7.3.0",
+    "@vitejs/plugin-react": "^5.2.0",
+    "vite-plugin-dts": "^4.5.4",
+    "vite-plugin-lib-inject-css": "^2.0.0",
+    "typescript": "~5.9.3",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "tailwindcss": "^4.2.1",
+    "@tailwindcss/vite": "^4.2.1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "storybook": "^10.3.0",
+    "@storybook/react-vite": "^10.3.0",
+    "@storybook/addon-docs": "^10.3.0",
+    "@storybook/addon-themes": "^10.3.0",
+    "vitest": "^4.1.0",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@vitest/coverage-v8": "^4.1.0"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/adam314dl-bit/simulation-bundle.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/adam314dl-bit/simulation-bundle/issues"
   },
-  "homepage": "https://github.com/adam314dl-bit/simulation-bundle#readme",
-  "devDependencies": {
-    "@testing-library/jest-dom": "^6.9.1",
-    "@testing-library/react": "^16.3.2",
-    "@vitejs/plugin-react": "^6.0.1",
-    "jsdom": "^29.0.0",
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4",
-    "typescript": "^5.9.3",
-    "vitest": "^4.1.0"
-  }
+  "homepage": "https://github.com/adam314dl-bit/simulation-bundle#readme"
 }
