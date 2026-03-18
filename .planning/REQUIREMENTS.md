@@ -9,22 +9,22 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Infrastructure
 
-- [ ] **INFRA-01**: Project scaffolded with Vite 7.3 library mode, React 19, TypeScript 5.9 strict mode
-- [ ] **INFRA-02**: Multi-entry build producing separate bundles per layer (core, rendering, controls, data, demos)
-- [ ] **INFRA-03**: Package.json with subpath exports supporting tree-shaking and tier separation ($29/$49)
-- [ ] **INFRA-04**: Tailwind v4 compiled to static CSS at build time with `--sim-*` CSS custom properties for theming
-- [ ] **INFRA-05**: Peer dependencies (React, Zustand, Recharts, D3-force) externalized correctly in build output
+- [x] **INFRA-01**: Project scaffolded with Vite 7.3 library mode, React 19, TypeScript 5.9 strict mode
+- [x] **INFRA-02**: Multi-entry build producing separate bundles per layer (core, rendering, controls, data, demos)
+- [x] **INFRA-03**: Package.json with subpath exports supporting tree-shaking and tier separation ($29/$49)
+- [x] **INFRA-04**: Tailwind v4 compiled to static CSS at build time with `--sim-*` CSS custom properties for theming
+- [x] **INFRA-05**: Peer dependencies (React, Zustand, Recharts, D3-force) externalized correctly in build output
 - [ ] **INFRA-06**: Storybook 10 configured with Vite builder for interactive component documentation
-- [ ] **INFRA-07**: Shared TypeScript type definitions exported from `src/types/index.ts`
+- [x] **INFRA-07**: Shared TypeScript type definitions exported from `src/types/index.ts`
 
 ### Core
 
-- [ ] **CORE-01**: SimulationProvider wraps children with Zustand store providing tick loop, state management, and playback controls
-- [ ] **CORE-02**: Tick loop uses requestAnimationFrame with accumulator pattern for stable ticks regardless of frame rate
-- [ ] **CORE-03**: History stored in pre-allocated ring buffer with O(1) random access for timeline scrubbing (configurable max length, default 1000)
-- [ ] **CORE-04**: useSimulation hook exposes play/pause/toggle/step/stepBack/setSpeed/setParameter/resetParameters/seekToTick/logEvent/subscribe
-- [ ] **CORE-05**: Speed multiplier supports 0.25x, 0.5x, 1x, 2x, 4x, 8x, 16x
-- [ ] **CORE-06**: Tick loop runs outside React render cycle via Zustand vanilla API (getState/setState) to avoid re-renders at tick rate
+- [x] **CORE-01**: SimulationProvider wraps children with Zustand store providing tick loop, state management, and playback controls
+- [x] **CORE-02**: Tick loop uses requestAnimationFrame with accumulator pattern for stable ticks regardless of frame rate
+- [x] **CORE-03**: History stored in pre-allocated ring buffer with O(1) random access for timeline scrubbing (configurable max length, default 1000)
+- [x] **CORE-04**: useSimulation hook exposes play/pause/toggle/step/stepBack/setSpeed/setParameter/resetParameters/seekToTick/logEvent/subscribe
+- [x] **CORE-05**: Speed multiplier supports 0.25x, 0.5x, 1x, 2x, 4x, 8x, 16x
+- [x] **CORE-06**: Tick loop runs outside React render cycle via Zustand vanilla API (getState/setState) to avoid re-renders at tick rate
 
 ### Rendering
 
@@ -61,12 +61,12 @@ Requirements for initial release. Each maps to roadmap phases.
 ### Utilities
 
 - [ ] **UTIL-01**: Six built-in color ramps (viridis, inferno, plasma, coolwarm, terrain, category10) implemented as 256-entry lookup tables returning CSS color strings
-- [ ] **UTIL-02**: Ring buffer utility (history-buffer.ts) with pre-allocated fixed-size array, O(1) push/read/random-access
+- [x] **UTIL-02**: Ring buffer utility (history-buffer.ts) with pre-allocated fixed-size array, O(1) push/read/random-access
 - [ ] **UTIL-03**: WebGL helper utilities for shader compilation, buffer management, and instanced rendering setup
 
 ### Theming
 
-- [ ] **THEME-01**: Dark theme by default with all visual tokens exposed as `--sim-*` CSS custom properties (bg, surface, border, text, accent, danger, warning, success, fonts, radius, padding)
+- [x] **THEME-01**: Dark theme by default with all visual tokens exposed as `--sim-*` CSS custom properties (bg, surface, border, text, accent, danger, warning, success, fonts, radius, padding)
 - [ ] **THEME-02**: Tailwind classes used for layout, CSS vars for colors — buyers override vars to match their brand without touching component code
 
 ### Demos
@@ -123,21 +123,21 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| INFRA-01 | Phase 1 | Pending |
-| INFRA-02 | Phase 1 | Pending |
-| INFRA-03 | Phase 1 | Pending |
-| INFRA-04 | Phase 1 | Pending |
-| INFRA-05 | Phase 1 | Pending |
+| INFRA-01 | Phase 1 | Complete |
+| INFRA-02 | Phase 1 | Complete |
+| INFRA-03 | Phase 1 | Complete |
+| INFRA-04 | Phase 1 | Complete |
+| INFRA-05 | Phase 1 | Complete |
 | INFRA-06 | Phase 1 | Pending |
-| INFRA-07 | Phase 1 | Pending |
-| CORE-01 | Phase 1 | Pending |
-| CORE-02 | Phase 1 | Pending |
-| CORE-03 | Phase 1 | Pending |
-| CORE-04 | Phase 1 | Pending |
-| CORE-05 | Phase 1 | Pending |
-| CORE-06 | Phase 1 | Pending |
-| UTIL-02 | Phase 1 | Pending |
-| THEME-01 | Phase 1 | Pending |
+| INFRA-07 | Phase 1 | Complete |
+| CORE-01 | Phase 1 | Complete |
+| CORE-02 | Phase 1 | Complete |
+| CORE-03 | Phase 1 | Complete |
+| CORE-04 | Phase 1 | Complete |
+| CORE-05 | Phase 1 | Complete |
+| CORE-06 | Phase 1 | Complete |
+| UTIL-02 | Phase 1 | Complete |
+| THEME-01 | Phase 1 | Complete |
 | THEME-02 | Phase 1 | Pending |
 | REND-01 | Phase 2 | Pending |
 | REND-02 | Phase 2 | Pending |
