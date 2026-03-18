@@ -29,7 +29,7 @@ Requirements for initial release. Each maps to roadmap phases.
 ### Rendering
 
 - [ ] **REND-01**: SimCanvas provides a base canvas element with mouse wheel zoom (cursor-centered), click-drag pan, touch pinch-zoom, and devicePixelRatio handling
-- [ ] **REND-02**: SimCanvas exposes Viewport with screenToWorld/worldToScreen coordinate transforms via onDraw callback
+- [x] **REND-02**: SimCanvas exposes Viewport with screenToWorld/worldToScreen coordinate transforms via onDraw callback
 - [ ] **REND-03**: GridRenderer renders 2D grid of color-mapped cells with configurable cell size, borders, cell highlighting, click and hover handlers
 - [ ] **REND-04**: GridRenderer achieves 500×500 grid at 30fps via dirty-rect optimization (only redraw changed cells)
 - [ ] **REND-05**: ParticleRenderer uses WebGL2 instanced rendering with interleaved Float32Array input, configurable point size, and color ramp texture
@@ -60,7 +60,7 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Utilities
 
-- [ ] **UTIL-01**: Six built-in color ramps (viridis, inferno, plasma, coolwarm, terrain, category10) implemented as 256-entry lookup tables returning CSS color strings
+- [x] **UTIL-01**: Six built-in color ramps (viridis, inferno, plasma, coolwarm, terrain, category10) implemented as 256-entry lookup tables returning CSS color strings
 - [x] **UTIL-02**: Ring buffer utility (history-buffer.ts) with pre-allocated fixed-size array, O(1) push/read/random-access
 - [ ] **UTIL-03**: WebGL helper utilities for shader compilation, buffer management, and instanced rendering setup
 
@@ -140,11 +140,11 @@ Which phases cover which requirements. Updated during roadmap creation.
 | THEME-01 | Phase 1 | Complete |
 | THEME-02 | Phase 1 | Complete |
 | REND-01 | Phase 2 | Pending |
-| REND-02 | Phase 2 | Pending |
+| REND-02 | Phase 2 | Complete |
 | REND-03 | Phase 2 | Pending |
 | REND-04 | Phase 2 | Pending |
 | REND-11 | Phase 2 | Pending |
-| UTIL-01 | Phase 2 | Pending |
+| UTIL-01 | Phase 2 | Complete |
 | CTRL-01 | Phase 3 | Pending |
 | CTRL-02 | Phase 3 | Pending |
 | CTRL-03 | Phase 3 | Pending |
