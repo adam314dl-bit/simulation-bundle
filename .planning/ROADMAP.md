@@ -31,11 +31,15 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. The history ring buffer stores and retrieves past states with O(1) random access, and seekToTick navigates to any stored tick
   4. All component styling uses --sim-* CSS custom properties with a dark theme by default, and overriding any --sim-* variable changes the corresponding visual token without touching component code
   5. TypeScript strict mode compiles cleanly and all public types are exported from src/types/index.ts
-**Plans**: TBD
+**Plans**: 6 plans
 
 Plans:
-- [ ] 01-01: TBD
-- [ ] 01-02: TBD
+- [ ] 01-01-PLAN.md — Test scaffold (vitest config + all test stubs, Wave 0 Nyquist baseline)
+- [ ] 01-02-PLAN.md — Project scaffold (package.json, tsconfig, src/ structure, types, theme CSS)
+- [ ] 01-03-PLAN.md — Build pipeline + Storybook (vite.config.ts, .storybook/ config with dark theme)
+- [ ] 01-04-PLAN.md — RingBuffer utility (TDD: history-buffer.ts, O(1) push/get/random-access)
+- [ ] 01-05-PLAN.md — Core engine (SimulationProvider, tick loop, useSimulation hook)
+- [ ] 01-06-PLAN.md — Smoke story + phase gate (Storybook story + human verification checkpoint)
 
 ### Phase 2: Canvas Rendering
 **Goal**: Users can see and interact with 2D canvas visualizations -- grids of colored cells with pan/zoom, layer compositing, and scientific color mapping
@@ -123,7 +127,7 @@ Note: Phases 2, 3, 4, and 5 all depend on Phase 1 but are independent of each ot
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Infrastructure + Core Engine | 0/? | Not started | - |
+| 1. Infrastructure + Core Engine | 0/6 | In progress | - |
 | 2. Canvas Rendering | 0/? | Not started | - |
 | 3. Controls | 0/? | Not started | - |
 | 4. Advanced Rendering | 0/? | Not started | - |
