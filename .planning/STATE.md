@@ -3,15 +3,15 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 01-04-PLAN.md
-last_updated: "2026-03-18T15:12:00Z"
-last_activity: 2026-03-18 -- Completed 01-04 RingBuffer TDD
+stopped_at: Completed 01-05-PLAN.md
+last_updated: "2026-03-18T15:17:24Z"
+last_activity: 2026-03-18 -- Completed 01-05 Core Simulation Engine
 progress:
   total_phases: 6
   completed_phases: 0
   total_plans: 6
-  completed_plans: 4
-  percent: 67
+  completed_plans: 5
+  percent: 83
 ---
 
 # Project State
@@ -26,33 +26,34 @@ See: .planning/PROJECT.md (updated 2026-03-18)
 ## Current Position
 
 Phase: 1 of 6 (Infrastructure + Core Engine)
-Plan: 4 of 6 in current phase
+Plan: 5 of 6 in current phase
 Status: Executing
-Last activity: 2026-03-18 -- Completed 01-04 RingBuffer TDD
+Last activity: 2026-03-18 -- Completed 01-05 Core Simulation Engine
 
-Progress: [███████░░░] 67%
+Progress: [████████░░] 83%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 4
+- Total plans completed: 5
 - Average duration: 3min
-- Total execution time: 0.20 hours
+- Total execution time: 0.25 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| 01-infrastructure | 4/6 | 12min | 3min |
+| 01-infrastructure | 5/6 | 15min | 3min |
 
 **Recent Trend:**
-- Last 5 plans: 01-01 (3min), 01-02 (5min), 01-03 (3min), 01-04 (1min)
+- Last 5 plans: 01-01 (3min), 01-02 (5min), 01-03 (3min), 01-04 (1min), 01-05 (3min)
 - Trend: stable
 
 *Updated after each plan completion*
 | Phase 01 P02 | 5min | 3 tasks | 13 files |
 | Phase 01 P03 | 3min | 2 tasks | 6 files |
 | Phase 01 P04 | 1min | 1 tasks | 3 files |
+| Phase 01 P05 | 3min | 2 tasks | 5 files |
 
 ## Accumulated Context
 
@@ -70,6 +71,9 @@ Recent decisions affecting current work:
 - [Phase 01-03]: Added theme CSS import to src/index.ts for build inclusion in dist/style.css
 - [Phase 01-03]: Configured assetFileNames to emit style.css (matching package.json exports)
 - [Phase 01-03]: Tailwind v4 compiled-to-static-CSS validated -- blocker resolved
+- [Phase 01-05]: useShallow for selector equality -- prevents infinite re-render on object selectors
+- [Phase 01-05]: lastTime=0 in tick loop -- first rAF frame produces real delta, MAX_DELTA_MS clamp handles browser startup
+- [Phase 01-05]: exactOptionalPropertyTypes -- manually construct SimConfig to avoid passing undefined
 
 ### Pending Todos
 
@@ -83,6 +87,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-18T15:12:00Z
-Stopped at: Completed 01-04-PLAN.md
+Last session: 2026-03-18T15:17:24Z
+Stopped at: Completed 01-05-PLAN.md
 Resume file: None
