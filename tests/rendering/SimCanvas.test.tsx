@@ -5,7 +5,7 @@ import { SimCanvas } from '../../src/rendering/SimCanvas';
 // jsdom has limited canvas support — focus on DOM structure, event wiring, prop passing
 
 // Mock requestAnimationFrame/cancelAnimationFrame for controlled testing
-const rafSpy = vi.spyOn(window, 'requestAnimationFrame').mockImplementation((cb) => {
+vi.spyOn(window, 'requestAnimationFrame').mockImplementation((cb) => {
   // Call once to verify onDraw is invoked
   setTimeout(() => cb(16), 0);
   return 1;
