@@ -67,7 +67,7 @@ Requirements for initial release. Each maps to roadmap phases.
 ### Theming
 
 - [x] **THEME-01**: Dark theme by default with all visual tokens exposed as `--sim-*` CSS custom properties (bg, surface, border, text, accent, danger, warning, success, fonts, radius, padding)
-- [ ] **THEME-02**: Tailwind classes used for layout, CSS vars for colors — buyers override vars to match their brand without touching component code
+- [x] **THEME-02**: Tailwind classes used for layout, CSS vars for colors — buyers override vars to match their brand without touching component code
 
 ### Demos
 
@@ -138,7 +138,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | CORE-06 | Phase 1 | Complete |
 | UTIL-02 | Phase 1 | Complete |
 | THEME-01 | Phase 1 | Complete |
-| THEME-02 | Phase 1 | Pending |
+| THEME-02 | Phase 1 | Complete |
 | REND-01 | Phase 2 | Pending |
 | REND-02 | Phase 2 | Pending |
 | REND-03 | Phase 2 | Pending |
