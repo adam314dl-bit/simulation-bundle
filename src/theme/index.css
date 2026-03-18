@@ -1,0 +1,38 @@
+/* src/theme/index.css */
+/* sim-kit design system — deep space dark aesthetic */
+/* Buyers override --sim-* variables to rebrand without touching component code */
+
+@import "tailwindcss";
+
+:root {
+  /* Backgrounds */
+  --sim-bg: #0a0a0f;
+  --sim-surface: #141420;
+  --sim-surface-raised: #1e1e2e;
+
+  /* Borders */
+  --sim-border: #2a2a3a;
+
+  /* Text */
+  --sim-text: #e8e8ed;
+  --sim-text-muted: #8888a0;
+
+  /* Accent — override this one variable to rebrand */
+  --sim-accent: #6366f1;
+
+  /* State colors */
+  --sim-danger: #ef4444;
+  --sim-warning: #f59e0b;
+  --sim-success: #22c55e;
+
+  /* Typography */
+  --sim-font-family: system-ui, -apple-system, sans-serif;
+  --sim-font-mono: 'JetBrains Mono', 'Fira Code', ui-monospace, monospace;
+
+  /* Shape */
+  --sim-radius-sm: 4px;
+  --sim-radius-md: 8px;
+
+  /* Spacing unit — multiply for consistent scale */
+  --sim-spacing: 4px;
+}
