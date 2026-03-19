@@ -77,7 +77,7 @@ Each task was committed atomically:
 1. **Task 1: Write README Quick Start and Component Reference** - `8999561` (feat)
 2. **Task 2: Write Create Your Own Sim, Theming, and Performance guides** - `a17414a` (feat)
 
-**Plan metadata:** TBD (docs: complete plan)
+**Plan metadata:** `b357e40` (docs: complete plan)
 
 ## Files Created/Modified
 - `README.md` - Complete project documentation (929 lines, 5 sections)
