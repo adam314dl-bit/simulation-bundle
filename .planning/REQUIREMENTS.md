@@ -81,10 +81,10 @@ Requirements for initial release. Each maps to roadmap phases.
 ### Documentation
 
 - [x] **DOCS-01**: README with quick start (npm install → see ecosystem demo in under 5 minutes), 10-line minimal example
-- [ ] **DOCS-02**: Component reference section with props table, usage example, and screenshot per component
-- [ ] **DOCS-03**: "Creating Your Own Simulation" guide covering state type definition, onTick function, ParameterSchema, and renderer selection
-- [ ] **DOCS-04**: Theming guide documenting all `--sim-*` CSS variables and Tailwind customization
-- [ ] **DOCS-05**: Performance guide covering grid size limits, particle count guidelines, and when to use OffscreenCanvas/Web Workers
+- [x] **DOCS-02**: Component reference section with props table, usage example, and screenshot per component
+- [x] **DOCS-03**: "Creating Your Own Simulation" guide covering state type definition, onTick function, ParameterSchema, and renderer selection
+- [x] **DOCS-04**: Theming guide documenting all `--sim-*` CSS variables and Tailwind customization
+- [x] **DOCS-05**: Performance guide covering grid size limits, particle count guidelines, and when to use OffscreenCanvas/Web Workers
 - [x] **DOCS-06**: Storybook stories for all 18 components with interactive prop playgrounds
 
 ## v2 Requirements
@@ -171,10 +171,10 @@ Which phases cover which requirements. Updated during roadmap creation.
 | DEMO-05 | Phase 6 | Complete |
 | DEMO-06 | Phase 6 | Complete |
 | DOCS-01 | Phase 6 | Complete |
-| DOCS-02 | Phase 6 | Pending |
-| DOCS-03 | Phase 6 | Pending |
-| DOCS-04 | Phase 6 | Pending |
-| DOCS-05 | Phase 6 | Pending |
+| DOCS-02 | Phase 6 | Complete |
+| DOCS-03 | Phase 6 | Complete |
+| DOCS-04 | Phase 6 | Complete |
+| DOCS-05 | Phase 6 | Complete |
 | DOCS-06 | Phase 6 | Complete |
 
 **Coverage:**
