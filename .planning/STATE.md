@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: unknown
-stopped_at: Completed 06-02-PLAN.md
-last_updated: "2026-03-19T10:09:10.000Z"
+stopped_at: Completed 06-03-PLAN.md
+last_updated: "2026-03-19T10:11:42.037Z"
 progress:
   total_phases: 6
   completed_phases: 5
   total_plans: 25
-  completed_plans: 21
+  completed_plans: 23
 ---
 
 # Project State
@@ -24,7 +24,7 @@ See: .planning/PROJECT.md (updated 2026-03-18)
 ## Current Position
 
 Phase: 06 (demos-documentation) — EXECUTING
-Plan: 3 of 6
+Plan: 5 of 6
 
 ## Performance Metrics
 
@@ -67,6 +67,7 @@ Plan: 3 of 6
 | Phase 05 P03 | 2min | 2 tasks | 3 files |
 | Phase 06 P01 | 3min | 2 tasks | 10 files |
 | Phase 06 P02 | 5min | 2 tasks | 5 files |
+| Phase 06 P03 | 6min | 2 tasks | 5 files |
 
 ## Accumulated Context
 
@@ -126,6 +127,9 @@ Recent decisions affecting current work:
 - [Phase 06]: Dev server uses pathname-based lazy routing with no React Router dependency
 - [Phase 06]: category10 color ramp for discrete ecosystem grid values (0-3 distinct colors)
 - [Phase 06]: MiniChart selectors as module-level consts outside component to avoid re-subscription
+- [Phase 06]: Wrapped tick function pattern: useRef<Attractor[]> injected via useCallback wrapper for mutable ref access in immutable tick
+- [Phase 06]: Custom PresetCards over PresetSelector: PresetSelector uses internal setParameter, cannot reinitialize entities or update renderer props
+- [Phase 06]: Provider key remount: increment key to force SimulationProvider remount on preset change for clean state reset
 
 ### Pending Todos
 
@@ -139,6 +143,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-19T10:09:10Z
-Stopped at: Completed 06-02-PLAN.md
+Last session: 2026-03-19T10:11:42.035Z
+Stopped at: Completed 06-03-PLAN.md
 Resume file: None
