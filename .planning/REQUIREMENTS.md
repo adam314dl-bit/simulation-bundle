@@ -35,9 +35,9 @@ Requirements for initial release. Each maps to roadmap phases.
 - [x] **REND-05**: ParticleRenderer uses WebGL2 instanced rendering with interleaved Float32Array input, configurable point size, and color ramp texture
 - [x] **REND-06**: ParticleRenderer supports trail effect via alpha fade overlay and additive/normal blending modes
 - [x] **REND-07**: ParticleRenderer achieves 100k particles at 60fps and falls back to Canvas2D if WebGL2 unavailable
-- [ ] **REND-08**: ForceGraph uses D3-force for layout computation with React-managed SVG rendering (no D3 DOM manipulation)
-- [ ] **REND-09**: ForceGraph supports interactive node dragging, hover/click handlers, configurable forces (charge, linkDistance, centerStrength, collisionRadius)
-- [ ] **REND-10**: ForceGraph auto-pauses simulation when stable (alpha < 0.001) and supports optional Canvas2D mode for >500 nodes
+- [x] **REND-08**: ForceGraph uses D3-force for layout computation with React-managed SVG rendering (no D3 DOM manipulation)
+- [x] **REND-09**: ForceGraph supports interactive node dragging, hover/click handlers, configurable forces (charge, linkDistance, centerStrength, collisionRadius)
+- [x] **REND-10**: ForceGraph auto-pauses simulation when stable (alpha < 0.001) and supports optional Canvas2D mode for >500 nodes
 - [x] **REND-11**: LayerStack composites multiple rendering layers with absolute positioning and z-index, plus SVG annotation overlay with selection modes (rect, lasso)
 
 ### Controls
@@ -154,9 +154,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 | REND-05 | Phase 4 | Complete |
 | REND-06 | Phase 4 | Complete |
 | REND-07 | Phase 4 | Complete |
-| REND-08 | Phase 4 | Pending |
-| REND-09 | Phase 4 | Pending |
-| REND-10 | Phase 4 | Pending |
+| REND-08 | Phase 4 | Complete |
+| REND-09 | Phase 4 | Complete |
+| REND-10 | Phase 4 | Complete |
 | UTIL-03 | Phase 4 | Complete |
 | DATA-01 | Phase 5 | Pending |
 | DATA-02 | Phase 5 | Pending |

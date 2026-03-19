@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: unknown
-stopped_at: Completed 04-02-PLAN.md
-last_updated: "2026-03-19T08:26:39.486Z"
+stopped_at: Completed 04-03-PLAN.md
+last_updated: "2026-03-19T08:30:33.781Z"
 progress:
   total_phases: 6
-  completed_phases: 3
+  completed_phases: 4
   total_plans: 16
-  completed_plans: 15
+  completed_plans: 16
 ---
 
 # Project State
@@ -61,6 +61,7 @@ Plan: 3 of 3
 | Phase 03 P03 | 4min | 2 tasks | 3 files |
 | Phase 04 P01 | 2min | 1 tasks | 6 files |
 | Phase 04 P02 | 3min | 2 tasks | 3 files |
+| Phase 04 P03 | 7min | 2 tasks | 4 files |
 
 ## Accumulated Context
 
@@ -106,6 +107,9 @@ Recent decisions affecting current work:
 - [Phase 04]: React.JSX.Element return type for strict TypeScript in ParticleRenderer
 - [Phase 04]: Scratch Float32Array cached in ref for custom colorMap to avoid per-frame allocation
 - [Phase 04]: Fullscreen triangle via gl_VertexID for fade overlay (no vertex buffer)
+- [Phase 04]: Synchronous sim.tick() before rAF handler for immediate node positions on mount
+- [Phase 04]: D3-force layout-only pattern: forceSimulation for positions, React owns all SVG/Canvas DOM
+- [Phase 04]: structuredClone for input immutability -- prevents d3-force from mutating caller node/link objects
 
 ### Pending Todos
 
@@ -119,6 +123,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-19T08:26:39.483Z
-Stopped at: Completed 04-02-PLAN.md
+Last session: 2026-03-19T08:30:33.778Z
+Stopped at: Completed 04-03-PLAN.md
 Resume file: None
