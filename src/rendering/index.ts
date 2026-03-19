@@ -11,3 +11,7 @@ export type { LayerStackProps, SelectionMode, Selection, RectSelection, LassoSel
 export { colorRamps, getRampLUT, createColorRamp } from './color-ramps';
 export { Viewport } from './viewport';
 export type { ViewportState, DrawCallback } from './types';
+
+export { ForceGraph } from './ForceGraph';
+export type { ForceGraphProps, GraphNode, GraphLink } from './types';
+export type { ParticleRendererProps } from './types';
