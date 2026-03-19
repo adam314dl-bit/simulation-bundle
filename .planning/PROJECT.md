@@ -21,6 +21,11 @@ Every simulation needs the same UI scaffolding — tick loops, parameter panels,
 - [x] WebGL2 particle system (100k particles at 60fps) with Canvas2D fallback — Validated in Phase 4: Advanced Rendering
 - [x] D3-force graph with React SVG/Canvas2D rendering and interactive node manipulation — Validated in Phase 4: Advanced Rendering
 - [x] WebGL helper utilities (context creation, shader compilation, buffer management, instanced draw) — Validated in Phase 4: Advanced Rendering
+- [x] Live stats panel with inline SVG sparklines and change indicators — Validated in Phase 5: Data Visualization
+- [x] Mini sparkline charts via Recharts with rAF-gated updates — Validated in Phase 5: Data Visualization
+- [x] Event log with severity filtering, virtualization, and click-to-seek — Validated in Phase 5: Data Visualization
+- [x] Canvas heatmap overlay with bilinear interpolation and color ramps — Validated in Phase 5: Data Visualization
+- [x] Entity inspector with inline charts, track toggle, and floating positioning — Validated in Phase 5: Data Visualization
 
 ### Active
 
@@ -76,4 +81,4 @@ Every simulation needs the same UI scaffolding — tick loops, parameter panels,
 | Reasonable perf over exotic optimizations | Hit 80%+ of targets with core optimizations, defer OffscreenCanvas worker | — Pending |
 
 ---
-*Last updated: 2026-03-19 after Phase 4 (Advanced Rendering) completion — 4 phases done, ParticleRenderer + ForceGraph + WebGL helpers delivered*
+*Last updated: 2026-03-19 after Phase 5 (Data Visualization) completion — 5 phases done, all 5 data components (StatsPanel, MiniChart, EventLog, HeatmapOverlay, EntityInspector) delivered with 46 tests*
