@@ -71,21 +71,21 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Demos
 
-- [ ] **DEMO-01**: Ecosystem demo implements Lotka-Volterra predator-prey on a 2D grid (grass/rabbits/foxes) with 8 configurable parameters using SimulationProvider, GridRenderer, ParameterPanel, TimelineControl, StatsPanel, MiniChart ×3, EventLog, and PresetSelector
-- [ ] **DEMO-02**: Ecosystem demo ships with 4 presets: "Stable coexistence", "Fox extinction", "Overpopulation crash", "Chaos"
-- [ ] **DEMO-03**: Particles demo implements N-body with configurable attractors and optional Boids flocking using SimulationProvider, ParticleRenderer, ParameterPanel, PlaybackBar, StatsPanel with click-to-place attractor interaction
-- [ ] **DEMO-04**: Particles demo ships with 4 presets: "Galaxy spiral", "Boids flocking", "Orbit chaos", "Fireworks" — Galaxy spiral with trails is the marketing hero visual
-- [ ] **DEMO-05**: Social network demo implements bounded confidence opinion dynamics on a scale-free graph using SimulationProvider, ForceGraph, ParameterPanel, TimelineControl, EventLog, EntityInspector, MiniChart
-- [ ] **DEMO-06**: Social network demo ships with 4 presets: "Echo chambers", "Consensus", "Polarization", "Media influence"
+- [x] **DEMO-01**: Ecosystem demo implements Lotka-Volterra predator-prey on a 2D grid (grass/rabbits/foxes) with 8 configurable parameters using SimulationProvider, GridRenderer, ParameterPanel, TimelineControl, StatsPanel, MiniChart ×3, EventLog, and PresetSelector
+- [x] **DEMO-02**: Ecosystem demo ships with 4 presets: "Stable coexistence", "Fox extinction", "Overpopulation crash", "Chaos"
+- [x] **DEMO-03**: Particles demo implements N-body with configurable attractors and optional Boids flocking using SimulationProvider, ParticleRenderer, ParameterPanel, PlaybackBar, StatsPanel with click-to-place attractor interaction
+- [x] **DEMO-04**: Particles demo ships with 4 presets: "Galaxy spiral", "Boids flocking", "Orbit chaos", "Fireworks" — Galaxy spiral with trails is the marketing hero visual
+- [x] **DEMO-05**: Social network demo implements bounded confidence opinion dynamics on a scale-free graph using SimulationProvider, ForceGraph, ParameterPanel, TimelineControl, EventLog, EntityInspector, MiniChart
+- [x] **DEMO-06**: Social network demo ships with 4 presets: "Echo chambers", "Consensus", "Polarization", "Media influence"
 
 ### Documentation
 
-- [ ] **DOCS-01**: README with quick start (npm install → see ecosystem demo in under 5 minutes), 10-line minimal example
+- [x] **DOCS-01**: README with quick start (npm install → see ecosystem demo in under 5 minutes), 10-line minimal example
 - [ ] **DOCS-02**: Component reference section with props table, usage example, and screenshot per component
 - [ ] **DOCS-03**: "Creating Your Own Simulation" guide covering state type definition, onTick function, ParameterSchema, and renderer selection
 - [ ] **DOCS-04**: Theming guide documenting all `--sim-*` CSS variables and Tailwind customization
 - [ ] **DOCS-05**: Performance guide covering grid size limits, particle count guidelines, and when to use OffscreenCanvas/Web Workers
-- [ ] **DOCS-06**: Storybook stories for all 18 components with interactive prop playgrounds
+- [x] **DOCS-06**: Storybook stories for all 18 components with interactive prop playgrounds
 
 ## v2 Requirements
 
@@ -164,18 +164,18 @@ Which phases cover which requirements. Updated during roadmap creation.
 | DATA-04 | Phase 5 | Complete |
 | DATA-05 | Phase 5 | Complete |
 | DATA-06 | Phase 5 | Complete |
-| DEMO-01 | Phase 6 | Pending |
-| DEMO-02 | Phase 6 | Pending |
-| DEMO-03 | Phase 6 | Pending |
-| DEMO-04 | Phase 6 | Pending |
-| DEMO-05 | Phase 6 | Pending |
-| DEMO-06 | Phase 6 | Pending |
-| DOCS-01 | Phase 6 | Pending |
+| DEMO-01 | Phase 6 | Complete |
+| DEMO-02 | Phase 6 | Complete |
+| DEMO-03 | Phase 6 | Complete |
+| DEMO-04 | Phase 6 | Complete |
+| DEMO-05 | Phase 6 | Complete |
+| DEMO-06 | Phase 6 | Complete |
+| DOCS-01 | Phase 6 | Complete |
 | DOCS-02 | Phase 6 | Pending |
 | DOCS-03 | Phase 6 | Pending |
 | DOCS-04 | Phase 6 | Pending |
 | DOCS-05 | Phase 6 | Pending |
-| DOCS-06 | Phase 6 | Pending |
+| DOCS-06 | Phase 6 | Complete |
 
 **Coverage:**
 - v1 requirements: 53 total
