@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: unknown
-stopped_at: Completed 06-04-PLAN.md
-last_updated: "2026-03-19T10:12:21.437Z"
+stopped_at: Completed 06-05-PLAN.md
+last_updated: "2026-03-19T10:19:22.223Z"
 progress:
   total_phases: 6
   completed_phases: 5
   total_plans: 25
-  completed_plans: 23
+  completed_plans: 24
 ---
 
 # Project State
@@ -24,7 +24,7 @@ See: .planning/PROJECT.md (updated 2026-03-18)
 ## Current Position
 
 Phase: 06 (demos-documentation) — EXECUTING
-Plan: 5 of 6
+Plan: 6 of 6
 
 ## Performance Metrics
 
@@ -69,6 +69,7 @@ Plan: 5 of 6
 | Phase 06 P02 | 5min | 2 tasks | 5 files |
 | Phase 06 P03 | 6min | 2 tasks | 5 files |
 | Phase 06 P04 | 7min | 2 tasks | 4 files |
+| Phase 06 P05 | 4min | 2 tasks | 19 files |
 
 ## Accumulated Context
 
@@ -134,6 +135,8 @@ Recent decisions affecting current work:
 - [Phase 06]: Preset objects carry both config and parameters alias for test compatibility
 - [Phase 06]: NetworkDemo self-contained: creates own SimulationProvider, inner overrides test wrapper
 - [Phase 06]: Components without testids wrapped in testid divs for test compatibility (ForceGraph, TimelineControl, EventLog, PresetSelector)
+- [Phase 06]: MockSimulationProvider uses identity tickFn with {value:42} default entities for minimal store setup
+- [Phase 06]: ParticleRenderer story uses canvas2d renderer to avoid WebGL context issues in Storybook
 
 ### Pending Todos
 
@@ -147,6 +150,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-19T10:12:21.435Z
-Stopped at: Completed 06-04-PLAN.md
+Last session: 2026-03-19T10:19:22.221Z
+Stopped at: Completed 06-05-PLAN.md
 Resume file: None
