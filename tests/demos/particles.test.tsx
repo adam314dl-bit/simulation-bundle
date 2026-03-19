@@ -22,7 +22,7 @@ describe('DEMO-03: Particles demo', () => {
         <ParticlesDemo />
       </SimulationProvider>
     );
-    expect(screen.getByText(/particles/i)).toBeInTheDocument();
+    expect(screen.getAllByText(/particles/i).length).toBeGreaterThan(0);
   });
 
   it('includes ParticleRenderer component', async () => {
