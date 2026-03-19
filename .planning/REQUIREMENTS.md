@@ -62,7 +62,7 @@ Requirements for initial release. Each maps to roadmap phases.
 
 - [x] **UTIL-01**: Six built-in color ramps (viridis, inferno, plasma, coolwarm, terrain, category10) implemented as 256-entry lookup tables returning CSS color strings
 - [x] **UTIL-02**: Ring buffer utility (history-buffer.ts) with pre-allocated fixed-size array, O(1) push/read/random-access
-- [ ] **UTIL-03**: WebGL helper utilities for shader compilation, buffer management, and instanced rendering setup
+- [x] **UTIL-03**: WebGL helper utilities for shader compilation, buffer management, and instanced rendering setup
 
 ### Theming
 
@@ -157,7 +157,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | REND-08 | Phase 4 | Pending |
 | REND-09 | Phase 4 | Pending |
 | REND-10 | Phase 4 | Pending |
-| UTIL-03 | Phase 4 | Pending |
+| UTIL-03 | Phase 4 | Complete |
 | DATA-01 | Phase 5 | Pending |
 | DATA-02 | Phase 5 | Pending |
 | DATA-03 | Phase 5 | Pending |
