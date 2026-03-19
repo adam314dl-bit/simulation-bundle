@@ -101,11 +101,12 @@ Plans:
   3. EventLog displays a scrolling, timestamped event feed color-coded by severity (info/warning/critical) with type filtering via pill toggles, auto-scroll, click-to-seek, and virtualized rendering for long lists
   4. HeatmapOverlay renders a canvas-based heatmap with selectable color ramp, adjustable opacity, bilinear interpolation, and a legend bar
   5. EntityInspector shows entity properties with inline MiniCharts for numeric history, a track toggle, and supports right/bottom/floating panel positioning with draggable floating mode
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 05-01: TBD
-- [ ] 05-02: TBD
+- [ ] 05-01-PLAN.md — Types + test scaffolds + StatsPanel (inline sparklines, change indicators) + MiniChart (Recharts rAF-gated sparkline)
+- [ ] 05-02-PLAN.md — EventLog (virtualized, severity filtering, click-to-seek) + HeatmapOverlay (canvas, bilinear interpolation, legend)
+- [ ] 05-03-PLAN.md — EntityInspector (property viewer, inline charts, track toggle, positioning) + barrel exports
 
 ### Phase 6: Demos + Documentation
 **Goal**: Three polished, fully-integrated demo simulations showcase every component in the kit, Storybook provides interactive documentation for all 18 components, and the README enables buyers to go from install to running simulation in under 5 minutes
@@ -135,5 +136,5 @@ Note: Phases 2, 3, 4, and 5 all depend on Phase 1 but are independent of each ot
 | 2. Canvas Rendering | 0/4 | Not started | - |
 | 3. Controls | 2/3 | In Progress|  |
 | 4. Advanced Rendering | 0/3 | Not started | - |
-| 5. Data Visualization | 0/? | Not started | - |
+| 5. Data Visualization | 0/3 | Not started | - |
 | 6. Demos + Documentation | 0/? | Not started | - |
