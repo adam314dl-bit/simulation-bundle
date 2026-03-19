@@ -72,7 +72,7 @@ describe('DEMO-01: Ecosystem demo', () => {
         <EcosystemDemo />
       </SimulationProvider>
     );
-    expect(screen.getByTestId('event-log')).toBeInTheDocument();
+    expect(screen.getByTestId('event-log-container')).toBeInTheDocument();
   });
 
   it('includes PresetSelector component', async () => {
@@ -92,7 +92,7 @@ describe('DEMO-01: Ecosystem demo', () => {
         <EcosystemDemo />
       </SimulationProvider>
     );
-    const miniCharts = container.querySelectorAll('[data-testid="mini-chart"]');
+    const miniCharts = container.querySelectorAll('[data-testid="minichart"]');
     expect(miniCharts.length).toBe(3);
   });
 
@@ -153,7 +153,7 @@ describe('DEMO-02: Ecosystem presets', () => {
 
     for (const preset of ecosystemPresets) {
       for (const key of requiredKeys) {
-        expect(preset.parameters).toHaveProperty(key);
+        expect(preset.config).toHaveProperty(key);
       }
     }
   });

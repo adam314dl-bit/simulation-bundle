@@ -40,6 +40,7 @@ export function ParameterPanel({ schema, columns, compact, className }: Paramete
   return (
     <div
       ref={containerRef}
+      data-testid="parameter-panel"
       className={clsx('sim-panel', compact && 'sim-panel-compact', className)}
       style={{
         display: 'grid',
