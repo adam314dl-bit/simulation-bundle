@@ -68,11 +68,12 @@ Plans:
   2. TimelineControl provides a draggable scrubber that seeks through simulation history, shows keyframe markers with tooltips, displays an FPS counter, and supports keyboard shortcuts (Space for play/pause, arrows for step, Shift+arrows for +/-10 ticks)
   3. PlaybackBar renders a minimal 40px-tall bar with play/pause, speed badge, and tick counter that works independently of TimelineControl
   4. PresetSelector switches between named parameter configurations and supports dropdown, cards, and pills layout variants
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 03-01: TBD
-- [ ] 03-02: TBD
+- [ ] 03-01-PLAN.md — Test scaffolds + ParameterPanel (auto-generated controls, layout, reset)
+- [ ] 03-02-PLAN.md — TimelineControl (scrubber, transport, keyboard shortcuts, FPS) + PlaybackBar (minimal bar)
+- [ ] 03-03-PLAN.md — PresetSelector (pills/dropdown/cards variants) + barrel exports
 
 ### Phase 4: Advanced Rendering
 **Goal**: Users can visualize particle systems (up to 100k particles at 60fps with trails) and force-directed graphs with interactive node manipulation
@@ -131,7 +132,7 @@ Note: Phases 2, 3, 4, and 5 all depend on Phase 1 but are independent of each ot
 |-------|----------------|--------|-----------|
 | 1. Infrastructure + Core Engine | 6/6 | Complete   | 2026-03-18 |
 | 2. Canvas Rendering | 0/4 | Not started | - |
-| 3. Controls | 0/? | Not started | - |
+| 3. Controls | 0/3 | Not started | - |
 | 4. Advanced Rendering | 0/? | Not started | - |
 | 5. Data Visualization | 0/? | Not started | - |
 | 6. Demos + Documentation | 0/? | Not started | - |
