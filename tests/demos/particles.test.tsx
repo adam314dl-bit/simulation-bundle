@@ -72,6 +72,7 @@ describe('DEMO-03: Particles demo', () => {
       particles: new Float32Array(4000), // 1000 particles * stride 4
       count: 1000,
       attractors: [],
+      stats: { avgSpeed: 0, avgDistance: 0, tick: 0 },
     };
 
     const params = {
@@ -109,7 +110,7 @@ describe('DEMO-04: Particles presets', () => {
     const { particlePresets } = await import('../../src/demos/particles/presets');
     const galaxy = particlePresets.find((p: { name: string }) => p.name === 'Galaxy spiral');
     expect(galaxy).toBeDefined();
-    expect(galaxy!.parameters.trails).toBe(true);
-    expect(galaxy!.parameters.blendMode).toBe('additive');
+    expect(galaxy!.config._trails).toBe(true);
+    expect(galaxy!.config._blendMode).toBe('additive');
   });
 });
