@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { useState, useCallback } from 'react';
-import { RingBuffer } from '../../src/utils/history-buffer';
+import { RingBuffer } from '../../src/core';
 
 function RingBufferDemo({ capacity }: { capacity: number }) {
   const [buffer] = useState(() => new RingBuffer<number>(capacity));

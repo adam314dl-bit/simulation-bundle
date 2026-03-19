@@ -22,6 +22,7 @@ export default defineConfig({
       'sim-kit/controls': '/src/controls/index.ts',
       'sim-kit/data': '/src/data/index.ts',
       'sim-kit/demos': '/src/demos/index.ts',
+      'sim-kit/utils': '/src/utils/index.ts',
       'sim-kit': '/src/index.ts',
     },
   },

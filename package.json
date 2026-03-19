@@ -37,6 +37,10 @@
       "types": "./dist/demos/index.d.ts",
       "import": "./dist/demos/index.js"
     },
+    "./utils": {
+      "types": "./dist/utils/index.d.ts",
+      "import": "./dist/utils/index.js"
+    },
     "./style.css": "./dist/style.css"
   },
   "scripts": {

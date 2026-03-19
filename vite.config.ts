@@ -26,6 +26,7 @@ export default defineConfig({
         'controls/index':   resolve(__dirname, 'src/controls/index.ts'),
         'data/index':       resolve(__dirname, 'src/data/index.ts'),
         'demos/index':      resolve(__dirname, 'src/demos/index.ts'),
+        'utils/index':      resolve(__dirname, 'src/utils/index.ts'),
       },
       formats: ['es'],
     },
