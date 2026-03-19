@@ -32,9 +32,9 @@ Requirements for initial release. Each maps to roadmap phases.
 - [x] **REND-02**: SimCanvas exposes Viewport with screenToWorld/worldToScreen coordinate transforms via onDraw callback
 - [x] **REND-03**: GridRenderer renders 2D grid of color-mapped cells with configurable cell size, borders, cell highlighting, click and hover handlers
 - [x] **REND-04**: GridRenderer achieves 500×500 grid at 30fps via dirty-rect optimization (only redraw changed cells)
-- [ ] **REND-05**: ParticleRenderer uses WebGL2 instanced rendering with interleaved Float32Array input, configurable point size, and color ramp texture
-- [ ] **REND-06**: ParticleRenderer supports trail effect via alpha fade overlay and additive/normal blending modes
-- [ ] **REND-07**: ParticleRenderer achieves 100k particles at 60fps and falls back to Canvas2D if WebGL2 unavailable
+- [x] **REND-05**: ParticleRenderer uses WebGL2 instanced rendering with interleaved Float32Array input, configurable point size, and color ramp texture
+- [x] **REND-06**: ParticleRenderer supports trail effect via alpha fade overlay and additive/normal blending modes
+- [x] **REND-07**: ParticleRenderer achieves 100k particles at 60fps and falls back to Canvas2D if WebGL2 unavailable
 - [ ] **REND-08**: ForceGraph uses D3-force for layout computation with React-managed SVG rendering (no D3 DOM manipulation)
 - [ ] **REND-09**: ForceGraph supports interactive node dragging, hover/click handlers, configurable forces (charge, linkDistance, centerStrength, collisionRadius)
 - [ ] **REND-10**: ForceGraph auto-pauses simulation when stable (alpha < 0.001) and supports optional Canvas2D mode for >500 nodes
@@ -151,9 +151,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 | CTRL-04 | Phase 3 | Complete |
 | CTRL-05 | Phase 3 | Complete |
 | CTRL-06 | Phase 3 | Complete |
-| REND-05 | Phase 4 | Pending |
-| REND-06 | Phase 4 | Pending |
-| REND-07 | Phase 4 | Pending |
+| REND-05 | Phase 4 | Complete |
+| REND-06 | Phase 4 | Complete |
+| REND-07 | Phase 4 | Complete |
 | REND-08 | Phase 4 | Pending |
 | REND-09 | Phase 4 | Pending |
 | REND-10 | Phase 4 | Pending |

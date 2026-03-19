@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: unknown
-stopped_at: Completed 04-01-PLAN.md
-last_updated: "2026-03-19T08:20:46.600Z"
+stopped_at: Completed 04-02-PLAN.md
+last_updated: "2026-03-19T08:26:39.486Z"
 progress:
   total_phases: 6
   completed_phases: 3
   total_plans: 16
-  completed_plans: 14
+  completed_plans: 15
 ---
 
 # Project State
@@ -24,7 +24,7 @@ See: .planning/PROJECT.md (updated 2026-03-18)
 ## Current Position
 
 Phase: 04 (advanced-rendering) — EXECUTING
-Plan: 2 of 3
+Plan: 3 of 3
 
 ## Performance Metrics
 
@@ -60,6 +60,7 @@ Plan: 2 of 3
 | Phase 03 P02 | 5min | 2 tasks | 5 files |
 | Phase 03 P03 | 4min | 2 tasks | 3 files |
 | Phase 04 P01 | 2min | 1 tasks | 6 files |
+| Phase 04 P02 | 3min | 2 tasks | 3 files |
 
 ## Accumulated Context
 
@@ -102,6 +103,9 @@ Recent decisions affecting current work:
 - [Phase 03]: Barrel exports wired in Task 1 commit (needed for test imports) rather than separate Task 2 commit
 - [Phase 04]: Mock WebGL2 context pattern with vi.fn() stubs for all GL methods
 - [Phase 04]: Direct relative imports for webgl-helpers tests (sim-kit/utils alias not configured)
+- [Phase 04]: React.JSX.Element return type for strict TypeScript in ParticleRenderer
+- [Phase 04]: Scratch Float32Array cached in ref for custom colorMap to avoid per-frame allocation
+- [Phase 04]: Fullscreen triangle via gl_VertexID for fade overlay (no vertex buffer)
 
 ### Pending Todos
 
@@ -115,6 +119,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-19T08:20:46.598Z
-Stopped at: Completed 04-01-PLAN.md
+Last session: 2026-03-19T08:26:39.483Z
+Stopped at: Completed 04-02-PLAN.md
 Resume file: None
