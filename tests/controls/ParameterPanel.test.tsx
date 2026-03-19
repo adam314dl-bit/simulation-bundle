@@ -1,8 +1,19 @@
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect, beforeAll } from 'vitest';
 import { render, screen, fireEvent } from '@testing-library/react';
 import { SimulationProvider } from 'sim-kit/core';
 import { ParameterPanel } from 'sim-kit/controls';
 import type { ParameterSchema } from 'sim-kit/types';
+
+// jsdom does not provide ResizeObserver — stub it for tests
+beforeAll(() => {
+  if (typeof globalThis.ResizeObserver === 'undefined') {
+    globalThis.ResizeObserver = class ResizeObserver {
+      observe() { /* noop */ }
+      unobserve() { /* noop */ }
+      disconnect() { /* noop */ }
+    } as unknown as typeof globalThis.ResizeObserver;
+  }
+});
 
 const testSchema: ParameterSchema = {
   speed: { type: 'range', min: 0, max: 100, step: 1, default: 50, label: 'Speed' },
@@ -66,8 +77,8 @@ describe('CTRL-01: auto-generates controls from ParameterSchema', () => {
 
   it('renders vec2 with two range inputs', () => {
     renderWithProvider(<ParameterPanel schema={testSchema} />);
-    const xSlider = screen.getByRole('slider', { name: /x/i });
-    const ySlider = screen.getByRole('slider', { name: /y/i });
+    const xSlider = screen.getByRole('slider', { name: 'X' });
+    const ySlider = screen.getByRole('slider', { name: 'Y' });
     expect(xSlider).toBeInTheDocument();
     expect(ySlider).toBeInTheDocument();
   });
