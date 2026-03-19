@@ -139,6 +139,9 @@ export function ForceGraph(props: ForceGraphProps): React.JSX.Element {
       .alphaDecay(alphaDecay)
       .alphaMin(alphaMin);
 
+    // Run one synchronous tick so nodes get initial positions before first render
+    sim.tick();
+
     let frameId = 0;
     sim.on('tick', () => {
       cancelAnimationFrame(frameId);
@@ -147,6 +150,14 @@ export function ForceGraph(props: ForceGraphProps): React.JSX.Element {
     sim.on('end', () => onStabilizeRef.current?.());
 
     simulationRef.current = sim;
+
+    // Trigger initial render with positions from the synchronous tick
+    setTick((t) => t + 1);
+
+    // If simulation already converged (alpha < alphaMin), fire onStabilize immediately
+    if (sim.alpha() < alphaMin) {
+      onStabilizeRef.current?.();
+    }
 
     return () => {
       sim.stop();
