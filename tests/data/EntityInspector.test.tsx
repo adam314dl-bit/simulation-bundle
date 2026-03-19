@@ -56,8 +56,9 @@ describe('DATA-06: EntityInspector', () => {
 
   it('renders title when provided', () => {
     renderWithProvider(<EntityInspector entity={mockEntity} title="Fox #42" />);
-    // Title should appear in header
-    expect(screen.getByText('Fox #42')).toBeInTheDocument();
+    // Title appears both in header and as entity value; verify multiple matches exist
+    const matches = screen.getAllByText('Fox #42');
+    expect(matches.length).toBeGreaterThanOrEqual(2);
   });
 
   it('renders "Inspector" as default title', () => {
