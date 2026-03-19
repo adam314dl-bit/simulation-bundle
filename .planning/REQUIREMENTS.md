@@ -51,8 +51,8 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Data
 
-- [ ] **DATA-01**: StatsPanel displays live-updating numeric readout with configurable formatting, optional inline sparklines (SVG), and change indicators (▲/▼ with color)
-- [ ] **DATA-02**: MiniChart renders auto-scrolling sparkline/area chart (via Recharts 3) with configurable data window, auto-scaling, and last-value overlay
+- [x] **DATA-01**: StatsPanel displays live-updating numeric readout with configurable formatting, optional inline sparklines (SVG), and change indicators (▲/▼ with color)
+- [x] **DATA-02**: MiniChart renders auto-scrolling sparkline/area chart (via Recharts 3) with configurable data window, auto-scaling, and last-value overlay
 - [ ] **DATA-03**: EventLog displays scrolling timestamped event feed color-coded by severity (info/warning/critical) with type filtering via pill toggles, auto-scroll, and click-to-seek
 - [ ] **DATA-04**: EventLog uses virtualized rendering for long event lists (only render visible rows)
 - [ ] **DATA-05**: HeatmapOverlay renders canvas-based heatmap with configurable color ramp, opacity, bilinear interpolation, and legend bar
@@ -158,8 +158,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | REND-09 | Phase 4 | Complete |
 | REND-10 | Phase 4 | Complete |
 | UTIL-03 | Phase 4 | Complete |
-| DATA-01 | Phase 5 | Pending |
-| DATA-02 | Phase 5 | Pending |
+| DATA-01 | Phase 5 | Complete |
+| DATA-02 | Phase 5 | Complete |
 | DATA-03 | Phase 5 | Pending |
 | DATA-04 | Phase 5 | Pending |
 | DATA-05 | Phase 5 | Pending |
