@@ -14,4 +14,5 @@ export type { ViewportState, DrawCallback } from './types';
 
 export { ForceGraph } from './ForceGraph';
 export type { ForceGraphProps, GraphNode, GraphLink } from './types';
+export { ParticleRenderer } from './ParticleRenderer';
 export type { ParticleRendererProps } from './types';
