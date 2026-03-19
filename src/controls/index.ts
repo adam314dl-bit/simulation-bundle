@@ -5,3 +5,5 @@ export { TimelineControl } from './TimelineControl';
 export type { TimelineControlProps } from './TimelineControl';
 export { PlaybackBar } from './PlaybackBar';
 export type { PlaybackBarProps } from './PlaybackBar';
+export { PresetSelector } from './PresetSelector';
+export type { PresetSelectorProps, Preset } from './PresetSelector';
