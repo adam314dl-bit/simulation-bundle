@@ -56,7 +56,7 @@ Requirements for initial release. Each maps to roadmap phases.
 - [x] **DATA-03**: EventLog displays scrolling timestamped event feed color-coded by severity (info/warning/critical) with type filtering via pill toggles, auto-scroll, and click-to-seek
 - [x] **DATA-04**: EventLog uses virtualized rendering for long event lists (only render visible rows)
 - [x] **DATA-05**: HeatmapOverlay renders canvas-based heatmap with configurable color ramp, opacity, bilinear interpolation, and legend bar
-- [ ] **DATA-06**: EntityInspector shows entity properties, inline MiniCharts for numeric history, track toggle, and supports right/bottom/floating positioning with draggable floating mode
+- [x] **DATA-06**: EntityInspector shows entity properties, inline MiniCharts for numeric history, track toggle, and supports right/bottom/floating positioning with draggable floating mode
 
 ### Utilities
 
@@ -163,7 +163,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | DATA-03 | Phase 5 | Complete |
 | DATA-04 | Phase 5 | Complete |
 | DATA-05 | Phase 5 | Complete |
-| DATA-06 | Phase 5 | Pending |
+| DATA-06 | Phase 5 | Complete |
 | DEMO-01 | Phase 6 | Pending |
 | DEMO-02 | Phase 6 | Pending |
 | DEMO-03 | Phase 6 | Pending |
