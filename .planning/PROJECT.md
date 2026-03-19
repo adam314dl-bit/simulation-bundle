@@ -26,6 +26,9 @@ Every simulation needs the same UI scaffolding — tick loops, parameter panels,
 - [x] Event log with severity filtering, virtualization, and click-to-seek — Validated in Phase 5: Data Visualization
 - [x] Canvas heatmap overlay with bilinear interpolation and color ramps — Validated in Phase 5: Data Visualization
 - [x] Entity inspector with inline charts, track toggle, and floating positioning — Validated in Phase 5: Data Visualization
+- [x] 3 working demos: ecosystem (Lotka-Volterra), particles (N-body + Boids), social network (opinion dynamics) — Validated in Phase 6: Demos + Documentation
+- [x] Storybook stories for all 18 components with interactive prop playgrounds — Validated in Phase 6: Demos + Documentation
+- [x] README with quick start, component reference, create-your-own guide, theming, and performance docs — Validated in Phase 6: Demos + Documentation
 
 ### Active
 
@@ -81,4 +84,4 @@ Every simulation needs the same UI scaffolding — tick loops, parameter panels,
 | Reasonable perf over exotic optimizations | Hit 80%+ of targets with core optimizations, defer OffscreenCanvas worker | — Pending |
 
 ---
-*Last updated: 2026-03-19 after Phase 5 (Data Visualization) completion — 5 phases done, all 5 data components (StatsPanel, MiniChart, EventLog, HeatmapOverlay, EntityInspector) delivered with 46 tests*
+*Last updated: 2026-03-19 after Phase 6 (Demos + Documentation) completion — ALL 6 PHASES COMPLETE. 18 components, 3 demos, 18 Storybook stories, 929-line README, 279 tests passing.*
