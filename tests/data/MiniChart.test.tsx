@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeAll, vi } from 'vitest';
+import { describe, it, expect, beforeAll } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import { SimulationProvider } from 'sim-kit/core';
 import { MiniChart } from 'sim-kit/data';

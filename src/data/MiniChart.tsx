@@ -27,7 +27,7 @@ export function MiniChart({
     if (!store) return;
     const unsub = store.subscribe(() => {
       const state = store.getState();
-      const value = selector(state as Record<string, unknown>);
+      const value = selector(state as unknown as Record<string, unknown>);
       dataRef.current = [
         ...dataRef.current.slice(-(windowSize - 1)),
         { tick: state.tick, value },

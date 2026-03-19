@@ -14,7 +14,7 @@ function buildSparklinePoints(data: number[], width: number, height: number): st
 
 function ChangeIndicator({ current, sparkline, threshold }: { current: number; sparkline: number[]; threshold: number }) {
   if (sparkline.length < 2) return null;
-  const previous = sparkline[sparkline.length - 2];
+  const previous = sparkline[sparkline.length - 2] ?? 0;
   if (previous === 0 && current === 0) return null;
   const pctChange = previous === 0 ? (current > 0 ? 100 : -100) : ((current - previous) / Math.abs(previous)) * 100;
   if (Math.abs(pctChange) <= threshold) return null;

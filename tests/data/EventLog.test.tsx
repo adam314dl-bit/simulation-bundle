@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeAll } from 'vitest';
-import { render, screen, fireEvent, act } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import { SimulationProvider } from 'sim-kit/core';
 import { EventLog } from 'sim-kit/data';
 import type { SimEvent } from 'sim-kit/types';
