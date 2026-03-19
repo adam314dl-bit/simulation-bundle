@@ -84,11 +84,12 @@ Plans:
   2. ParticleRenderer supports trail effects via alpha fade overlay with both additive and normal blending modes, and gracefully falls back to Canvas2D when WebGL2 is unavailable
   3. ForceGraph renders a force-directed graph using D3-force for layout computation and React-managed SVG for node/link rendering, with no D3 DOM manipulation
   4. ForceGraph supports interactive node dragging, hover/click handlers, configurable forces (charge, linkDistance, centerStrength, collisionRadius), auto-pauses when stable (alpha < 0.001), and offers optional Canvas2D mode for graphs with more than 500 nodes
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 04-01: TBD
-- [ ] 04-02: TBD
+- [ ] 04-01-PLAN.md — Test scaffolds + types + WebGL helpers (UTIL-03)
+- [ ] 04-02-PLAN.md — ParticleRenderer (WebGL2 instanced rendering, trails, Canvas2D fallback)
+- [ ] 04-03-PLAN.md — ForceGraph (D3-force layout, SVG/Canvas2D rendering, interactions) + barrel exports
 
 ### Phase 5: Data Visualization
 **Goal**: Users can monitor simulation state through live stats, sparkline charts, filtered event logs, heatmap overlays, and detailed entity inspection
@@ -133,6 +134,6 @@ Note: Phases 2, 3, 4, and 5 all depend on Phase 1 but are independent of each ot
 | 1. Infrastructure + Core Engine | 6/6 | Complete   | 2026-03-18 |
 | 2. Canvas Rendering | 0/4 | Not started | - |
 | 3. Controls | 2/3 | In Progress|  |
-| 4. Advanced Rendering | 0/? | Not started | - |
+| 4. Advanced Rendering | 0/3 | Not started | - |
 | 5. Data Visualization | 0/? | Not started | - |
 | 6. Demos + Documentation | 0/? | Not started | - |
