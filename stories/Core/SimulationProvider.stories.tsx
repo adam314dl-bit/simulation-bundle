@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { SimulationProvider, useSimulation } from '../src/core';
+import { SimulationProvider, useSimulation } from '../../src/core';
 
 /**
  * Smoke test story: verifies SimulationProvider + useSimulation work end-to-end.

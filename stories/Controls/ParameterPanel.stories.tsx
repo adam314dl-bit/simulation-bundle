@@ -20,10 +20,15 @@ const sampleSchema: ParameterSchema = {
 };
 
 function ParameterPanelDemo({ columns, compact }: { columns?: 1 | 2; compact?: boolean }) {
+  const panelProps = {
+    schema: sampleSchema,
+    ...(columns !== undefined ? { columns } : {}),
+    ...(compact !== undefined ? { compact } : {}),
+  };
   return (
     <MockSimulationProvider parameters={sampleSchema}>
       <div style={{ maxWidth: 500 }}>
-        <ParameterPanel schema={sampleSchema} columns={columns} compact={compact} />
+        <ParameterPanel {...panelProps} />
       </div>
     </MockSimulationProvider>
   );

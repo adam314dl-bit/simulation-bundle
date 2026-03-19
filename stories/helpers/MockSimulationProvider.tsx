@@ -12,8 +12,13 @@ interface MockProps {
 const identityTick = (e: unknown) => e;
 
 export function MockSimulationProvider({ children, initialEntities, parameters }: MockProps) {
+  const providerProps = {
+    tickFn: identityTick,
+    initialEntities: initialEntities ?? { value: 42 },
+    ...(parameters !== undefined ? { parameters } : {}),
+  };
   return (
-    <SimulationProvider tickFn={identityTick} initialEntities={initialEntities ?? { value: 42 }} parameters={parameters}>
+    <SimulationProvider {...providerProps}>
       {children}
     </SimulationProvider>
   );

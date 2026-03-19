@@ -23,6 +23,7 @@ function EventSeeder({ count }: { count: number }) {
   useEffect(() => {
     for (let i = 0; i < count; i++) {
       logEvent({
+        tick: i,
         type: 'sim',
         severity: severities[i % 3]!,
         message: messages[i % messages.length]!,
