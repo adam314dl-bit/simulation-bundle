@@ -118,11 +118,15 @@ Plans:
   3. Social network demo runs bounded confidence opinion dynamics on a scale-free graph with ForceGraph, EntityInspector, and 4 presets (Echo chambers, Consensus, Polarization, Media influence)
   4. Storybook stories exist for all 18 components with interactive prop playgrounds that let buyers explore every component in isolation
   5. README quick start guide gets a buyer from npm install to seeing the ecosystem demo running in under 5 minutes, with component reference, "create your own sim" guide, theming docs, and performance guide all present
-**Plans**: TBD
+**Plans**: 6 plans
 
 Plans:
-- [ ] 06-01: TBD
-- [ ] 06-02: TBD
+- [ ] 06-01-PLAN.md — Test scaffolds + DemoLayout + dev server entry (Wave 0 foundation)
+- [ ] 06-02-PLAN.md — Ecosystem demo (Lotka-Volterra predator-prey, 8 params, 4 presets)
+- [ ] 06-03-PLAN.md — Particles demo (N-body + Boids, click attractors, trails, 4 presets)
+- [ ] 06-04-PLAN.md — Social network demo (opinion dynamics, ForceGraph, EntityInspector, 4 presets)
+- [ ] 06-05-PLAN.md — Storybook stories for all 18 components with interactive prop playgrounds
+- [ ] 06-06-PLAN.md — README documentation (Quick Start, Component Reference, Guides)
 
 ## Progress
 
@@ -137,4 +141,4 @@ Note: Phases 2, 3, 4, and 5 all depend on Phase 1 but are independent of each ot
 | 3. Controls | 2/3 | In Progress|  |
 | 4. Advanced Rendering | 0/3 | Not started | - |
 | 5. Data Visualization | 1/3 | In Progress|  |
-| 6. Demos + Documentation | 0/? | Not started | - |
+| 6. Demos + Documentation | 0/6 | Not started | - |
