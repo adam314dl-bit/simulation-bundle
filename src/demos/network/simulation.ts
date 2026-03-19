@@ -51,7 +51,7 @@ export function generateScaleFreeGraph(
       let r = Math.random() * totalDegree;
       let cumulative = 0;
       for (let j = 0; j < i; j++) {
-        cumulative += degree[j];
+        cumulative += (degree[j] ?? 0);
         if (cumulative > r) {
           targets.add(j);
           break;
@@ -61,8 +61,8 @@ export function generateScaleFreeGraph(
 
     for (const t of targets) {
       links.push({ source: `${i}`, target: `${t}` });
-      degree[i]++;
-      degree[t]++;
+      degree[i] = (degree[i] ?? 0) + 1;
+      degree[t] = (degree[t] ?? 0) + 1;
     }
   }
 
@@ -187,10 +187,12 @@ export function createNetwork(
     // Fisher-Yates shuffle to pick random subset
     for (let i = indices.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
-      [indices[i], indices[j]] = [indices[j], indices[i]];
+      const tmp = indices[i]!;
+      indices[i] = indices[j]!;
+      indices[j] = tmp;
     }
     for (let i = 0; i < targetCount && i < indices.length; i++) {
-      links.push({ source: 'media', target: `${indices[i]}` });
+      links.push({ source: 'media', target: `${indices[i]!}` });
     }
   }
 
@@ -233,7 +235,7 @@ export const opinionTick: TickFn<NetworkEntities> = (entities, params) => {
   // Random interactions along existing links
   for (let k = 0; k < interactionsPerTick; k++) {
     if (links.length === 0) break;
-    const link = links[Math.floor(Math.random() * links.length)];
+    const link = links[Math.floor(Math.random() * links.length)]!;
     const srcId = typeof link.source === 'string' ? link.source : link.source.id;
     const tgtId = typeof link.target === 'string' ? link.target : link.target.id;
     const nodeI = nodeMap.get(srcId);
