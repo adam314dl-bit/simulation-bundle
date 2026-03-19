@@ -18,6 +18,9 @@ Every simulation needs the same UI scaffolding — tick loops, parameter panels,
 - [x] Tree-shakable library build with separate entry points per layer — Validated in Phase 1: Infrastructure & Core Engine
 - [x] 6 built-in color ramps (viridis, inferno, plasma, coolwarm, terrain, category10) — Validated in Phase 2: Canvas Rendering
 - [x] Auto-generated parameter panel from schema, timeline scrubber with keyframes, playback bar, preset selector — Validated in Phase 3: Controls
+- [x] WebGL2 particle system (100k particles at 60fps) with Canvas2D fallback — Validated in Phase 4: Advanced Rendering
+- [x] D3-force graph with React SVG/Canvas2D rendering and interactive node manipulation — Validated in Phase 4: Advanced Rendering
+- [x] WebGL helper utilities (context creation, shader compilation, buffer management, instanced draw) — Validated in Phase 4: Advanced Rendering
 
 ### Active
 
@@ -73,4 +76,4 @@ Every simulation needs the same UI scaffolding — tick loops, parameter panels,
 | Reasonable perf over exotic optimizations | Hit 80%+ of targets with core optimizations, defer OffscreenCanvas worker | — Pending |
 
 ---
-*Last updated: 2026-03-19 after Phase 3 (Controls) completion — 3 phases done, 4 components delivered*
+*Last updated: 2026-03-19 after Phase 4 (Advanced Rendering) completion — 4 phases done, ParticleRenderer + ForceGraph + WebGL helpers delivered*
