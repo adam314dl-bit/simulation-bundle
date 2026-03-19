@@ -44,9 +44,9 @@ Requirements for initial release. Each maps to roadmap phases.
 
 - [x] **CTRL-01**: ParameterPanel auto-generates UI controls from a ParameterSchema supporting range (slider + numeric display), toggle, select, color, vec2 (two-handle), and group (collapsible) types
 - [x] **CTRL-02**: ParameterPanel supports reset all, compact mode, 1 or 2 column layout, real-time value display, and dark mode
-- [ ] **CTRL-03**: TimelineControl provides draggable scrubber, click-to-seek, play/pause, step forward/back, speed selector, keyframe markers with tooltips, and FPS counter
-- [ ] **CTRL-04**: TimelineControl supports keyboard shortcuts: Space (play/pause), ←/→ (step), Shift+←/→ (±10 ticks)
-- [ ] **CTRL-05**: PlaybackBar provides minimal 40px-tall bar with play/pause button, speed badge, and tick counter (no scrubber)
+- [x] **CTRL-03**: TimelineControl provides draggable scrubber, click-to-seek, play/pause, step forward/back, speed selector, keyframe markers with tooltips, and FPS counter
+- [x] **CTRL-04**: TimelineControl supports keyboard shortcuts: Space (play/pause), ←/→ (step), Shift+←/→ (±10 ticks)
+- [x] **CTRL-05**: PlaybackBar provides minimal 40px-tall bar with play/pause button, speed badge, and tick counter (no scrubber)
 - [ ] **CTRL-06**: PresetSelector switches between saved parameter configurations with dropdown, cards, or pills layout options
 
 ### Data
@@ -147,9 +147,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 | UTIL-01 | Phase 2 | Complete |
 | CTRL-01 | Phase 3 | Complete |
 | CTRL-02 | Phase 3 | Complete |
-| CTRL-03 | Phase 3 | Pending |
-| CTRL-04 | Phase 3 | Pending |
-| CTRL-05 | Phase 3 | Pending |
+| CTRL-03 | Phase 3 | Complete |
+| CTRL-04 | Phase 3 | Complete |
+| CTRL-05 | Phase 3 | Complete |
 | CTRL-06 | Phase 3 | Pending |
 | REND-05 | Phase 4 | Pending |
 | REND-06 | Phase 4 | Pending |

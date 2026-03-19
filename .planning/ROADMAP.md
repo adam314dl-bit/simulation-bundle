@@ -132,7 +132,7 @@ Note: Phases 2, 3, 4, and 5 all depend on Phase 1 but are independent of each ot
 |-------|----------------|--------|-----------|
 | 1. Infrastructure + Core Engine | 6/6 | Complete   | 2026-03-18 |
 | 2. Canvas Rendering | 0/4 | Not started | - |
-| 3. Controls | 0/3 | Not started | - |
+| 3. Controls | 2/3 | In Progress|  |
 | 4. Advanced Rendering | 0/? | Not started | - |
 | 5. Data Visualization | 0/? | Not started | - |
 | 6. Demos + Documentation | 0/? | Not started | - |
