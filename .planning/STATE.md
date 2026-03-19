@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: unknown
-stopped_at: Completed 05-01-PLAN.md
-last_updated: "2026-03-19T09:06:44.641Z"
+stopped_at: Completed 05-02-PLAN.md
+last_updated: "2026-03-19T09:07:16.603Z"
 progress:
   total_phases: 6
   completed_phases: 4
   total_plans: 19
-  completed_plans: 17
+  completed_plans: 18
 ---
 
 # Project State
@@ -63,6 +63,7 @@ Plan: 2 of 3
 | Phase 04 P02 | 3min | 2 tasks | 3 files |
 | Phase 04 P03 | 7min | 2 tasks | 4 files |
 | Phase 05 P01 | 3min | 2 tasks | 6 files |
+| Phase 05 P02 | 4min | 2 tasks | 6 files |
 
 ## Accumulated Context
 
@@ -114,6 +115,9 @@ Recent decisions affecting current work:
 - [Phase 05]: Hand-drawn SVG polyline for sparklines instead of Recharts (60x20px inline, no overhead)
 - [Phase 05]: rAF gate on Zustand subscribe for MiniChart to avoid degrading tick loop
 - [Phase 05]: isAnimationActive=false on Recharts Area to prevent layout thrashing
+- [Phase 05]: Manual virtualization with translateY positioning for EventLog (no library dependency)
+- [Phase 05]: bilinearSample exported as named pure function for testability
+- [Phase 05]: HeatmapOverlay as standalone canvas component; LayerStack integration deferred to Phase 6
 
 ### Pending Todos
 
@@ -127,6 +131,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-19T09:06:44.639Z
-Stopped at: Completed 05-01-PLAN.md
+Last session: 2026-03-19T09:07:16.601Z
+Stopped at: Completed 05-02-PLAN.md
 Resume file: None

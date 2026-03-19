@@ -53,9 +53,9 @@ Requirements for initial release. Each maps to roadmap phases.
 
 - [x] **DATA-01**: StatsPanel displays live-updating numeric readout with configurable formatting, optional inline sparklines (SVG), and change indicators (▲/▼ with color)
 - [x] **DATA-02**: MiniChart renders auto-scrolling sparkline/area chart (via Recharts 3) with configurable data window, auto-scaling, and last-value overlay
-- [ ] **DATA-03**: EventLog displays scrolling timestamped event feed color-coded by severity (info/warning/critical) with type filtering via pill toggles, auto-scroll, and click-to-seek
-- [ ] **DATA-04**: EventLog uses virtualized rendering for long event lists (only render visible rows)
-- [ ] **DATA-05**: HeatmapOverlay renders canvas-based heatmap with configurable color ramp, opacity, bilinear interpolation, and legend bar
+- [x] **DATA-03**: EventLog displays scrolling timestamped event feed color-coded by severity (info/warning/critical) with type filtering via pill toggles, auto-scroll, and click-to-seek
+- [x] **DATA-04**: EventLog uses virtualized rendering for long event lists (only render visible rows)
+- [x] **DATA-05**: HeatmapOverlay renders canvas-based heatmap with configurable color ramp, opacity, bilinear interpolation, and legend bar
 - [ ] **DATA-06**: EntityInspector shows entity properties, inline MiniCharts for numeric history, track toggle, and supports right/bottom/floating positioning with draggable floating mode
 
 ### Utilities
@@ -160,9 +160,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 | UTIL-03 | Phase 4 | Complete |
 | DATA-01 | Phase 5 | Complete |
 | DATA-02 | Phase 5 | Complete |
-| DATA-03 | Phase 5 | Pending |
-| DATA-04 | Phase 5 | Pending |
-| DATA-05 | Phase 5 | Pending |
+| DATA-03 | Phase 5 | Complete |
+| DATA-04 | Phase 5 | Complete |
+| DATA-05 | Phase 5 | Complete |
 | DATA-06 | Phase 5 | Pending |
 | DEMO-01 | Phase 6 | Pending |
 | DEMO-02 | Phase 6 | Pending |
