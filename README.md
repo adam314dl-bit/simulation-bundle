@@ -643,3 +643,287 @@ console.log(buf.size);   // 2
 console.log(buf.get(0)); // 42
 console.log(buf.latest); // 43
 ```
+
+## Creating Your Own Simulation
+
+Follow these steps to build a custom simulation from scratch using sim-kit.
+
+### 1. Define your state type
+
+Define a TypeScript interface for your simulation entities. This is the data that your tick function will read and produce.
+
+```typescript
+interface MyEntities {
+  grid: Uint8Array;        // Cell values
+  width: number;
+  height: number;
+  stats: { population: number; generation: number };
+}
+```
+
+### 2. Write your tick function
+
+A `TickFn` receives the current entities and parameter values, and returns the **next** entities. Always return new objects -- never mutate the input.
+
+```typescript
+import type { TickFn, ParameterValue } from 'sim-kit/core';
+
+const tickFn: TickFn<MyEntities> = (entities, params) => {
+  const { grid, width, height } = entities;
+  const next = new Uint8Array(grid.length); // Always allocate new
+  const rate = params.growthRate as number;
+
+  let population = 0;
+  for (let i = 0; i < grid.length; i++) {
+    // Your simulation logic here
+    next[i] = Math.random() < rate ? 1 : grid[i];
+    if (next[i] > 0) population++;
+  }
+
+  return {
+    grid: next,
+    width,
+    height,
+    stats: { population, generation: entities.stats.generation + 1 },
+  };
+};
+```
+
+### 3. Define your parameter schema
+
+A `ParameterSchema` describes the controls that ParameterPanel auto-generates. Supported types: `range`, `toggle`, `select`, `color`, `vec2`, and `group`.
+
+```typescript
+import type { ParameterSchema } from 'sim-kit/core';
+
+const schema: ParameterSchema = {
+  growthRate: { type: 'range', min: 0, max: 1, step: 0.01, default: 0.05, label: 'Growth Rate' },
+  wrapEdges: { type: 'toggle', default: true, label: 'Wrap Edges' },
+  colorScheme: { type: 'select', options: ['viridis', 'inferno', 'plasma'], default: 'viridis', label: 'Colors' },
+};
+```
+
+### 4. Choose your renderer
+
+| Data Shape | Renderer | When to Use |
+|-----------|----------|-------------|
+| 2D grid (`Uint8Array`) | GridRenderer | Cellular automata, game of life, heatmaps |
+| Particle positions (`Float32Array`) | ParticleRenderer | Physics sims, flocking, particle systems |
+| Graph (nodes + links) | ForceGraph | Networks, social sims, dependency graphs |
+| Custom drawing | SimCanvas + onDraw | Anything else |
+
+### 5. Wire it up
+
+Compose `SimulationProvider` with your chosen renderer, a `ParameterPanel`, and playback controls:
+
+```typescript
+import { SimulationProvider } from 'sim-kit/core';
+import { GridRenderer } from 'sim-kit/rendering';
+import { ParameterPanel, PlaybackBar } from 'sim-kit/controls';
+import { StatsPanel } from 'sim-kit/data';
+
+const initial: MyEntities = {
+  grid: new Uint8Array(100 * 100),
+  width: 100,
+  height: 100,
+  stats: { population: 0, generation: 0 },
+};
+
+export function MySim() {
+  return (
+    <SimulationProvider tickFn={tickFn} initialEntities={initial} parameters={schema}>
+      <div style={{ display: 'flex', gap: 16 }}>
+        <GridRenderer config={{ data: initial.grid, width: 100, height: 100, cellSize: 5 }} />
+        <ParameterPanel schema={schema} />
+      </div>
+      <PlaybackBar />
+      <StatsPanel stats={[{ label: 'Population', value: 0 }]} />
+    </SimulationProvider>
+  );
+}
+```
+
+### 6. Add presets
+
+Define preset parameter configurations and render a `PresetSelector`:
+
+```typescript
+import { PresetSelector } from 'sim-kit/controls';
+import type { Preset } from 'sim-kit/controls';
+
+const presets: Preset[] = [
+  { name: 'Slow Growth', config: { growthRate: 0.02, wrapEdges: true } },
+  { name: 'Fast Growth', config: { growthRate: 0.15, wrapEdges: true } },
+  { name: 'No Wrap', config: { growthRate: 0.05, wrapEdges: false } },
+];
+
+<PresetSelector presets={presets} variant="pills" />
+```
+
+### Complete example
+
+Here is a full working simulation in ~30 lines:
+
+```typescript
+import 'sim-kit/style.css';
+import { SimulationProvider } from 'sim-kit/core';
+import type { TickFn, ParameterSchema } from 'sim-kit/core';
+import { GridRenderer } from 'sim-kit/rendering';
+import { ParameterPanel, PlaybackBar } from 'sim-kit/controls';
+
+interface Entities { grid: Uint8Array; width: number; height: number }
+
+const schema: ParameterSchema = {
+  density: { type: 'range', min: 0, max: 1, step: 0.01, default: 0.5, label: 'Density' },
+};
+
+const tickFn: TickFn<Entities> = (e, params) => {
+  const next = new Uint8Array(e.grid.length);
+  const d = params.density as number;
+  for (let i = 0; i < next.length; i++) next[i] = Math.random() < d ? 1 : 0;
+  return { ...e, grid: next };
+};
+
+const init: Entities = { grid: new Uint8Array(80 * 80), width: 80, height: 80 };
+
+export default function App() {
+  return (
+    <SimulationProvider tickFn={tickFn} initialEntities={init} parameters={schema}>
+      <GridRenderer config={{ data: init.grid, width: 80, height: 80, cellSize: 6, colorRamp: 'inferno' }} />
+      <ParameterPanel schema={schema} />
+      <PlaybackBar />
+    </SimulationProvider>
+  );
+}
+```
+
+## Theming
+
+sim-kit uses CSS custom properties for all visual styling. Override them once to re-theme the entire kit.
+
+### CSS Variables
+
+All components reference these `--sim-*` variables:
+
+| Variable | Default | What It Controls |
+|----------|---------|------------------|
+| `--sim-bg` | `#0a0a0f` | Page/container background |
+| `--sim-surface` | `#141420` | Panel and card backgrounds |
+| `--sim-surface-raised` | `#1e1e2e` | Elevated surface (buttons, dropdowns) |
+| `--sim-border` | `#2a2a3a` | Borders and dividers |
+| `--sim-text` | `#e8e8ed` | Primary text color |
+| `--sim-text-muted` | `#8888a0` | Secondary/label text color |
+| `--sim-accent` | `#6366f1` | Primary accent (buttons, highlights, charts) |
+| `--sim-danger` | `#ef4444` | Error/danger state |
+| `--sim-warning` | `#f59e0b` | Warning state |
+| `--sim-success` | `#22c55e` | Success state |
+| `--sim-info` | `#60a5fa` | Info state |
+| `--sim-critical` | `#f87171` | Critical event severity |
+| `--sim-font-family` | `system-ui, -apple-system, sans-serif` | Body font |
+| `--sim-font-mono` | `'JetBrains Mono', 'Fira Code', ui-monospace, monospace` | Monospace font |
+| `--sim-radius-sm` | `4px` | Small border radius |
+| `--sim-radius-md` | `8px` | Medium border radius |
+| `--sim-spacing` | `4px` | Base spacing unit |
+
+### Override example
+
+Switch to a light theme by overriding the color variables:
+
+```css
+:root {
+  --sim-bg: #ffffff;
+  --sim-surface: #f8f9fa;
+  --sim-surface-raised: #e9ecef;
+  --sim-border: #dee2e6;
+  --sim-text: #111827;
+  --sim-text-muted: #6b7280;
+  --sim-accent: #2563eb;
+}
+```
+
+### Scoped theming
+
+Apply a different theme to a specific section by scoping variables to a container:
+
+```css
+.my-sim-container {
+  --sim-accent: #10b981;
+  --sim-bg: #0f172a;
+}
+```
+
+### Tailwind compatibility
+
+Layout uses Tailwind utility classes. Colors use CSS custom properties. You can use both. The `sim-kit/style.css` import includes Tailwind preflight and the `--sim-*` variable definitions.
+
+## Performance
+
+Practical guidelines for getting the best performance from sim-kit.
+
+### Grid rendering
+
+- **Up to 500x500 cells at 30fps** with dirty-rect optimization. GridRenderer automatically detects which cells changed between ticks and only repaints those.
+- Above 250,000 cells, consider OffscreenCanvas (planned for v2).
+- Set `cellSize` to at least 2px. Smaller values produce a grid larger than the viewport without zoom.
+- GridRenderer's dirty-rect tracking automatically triggers a full repaint when more than 30% of cells change in a single tick.
+
+### Particle rendering
+
+- **Up to 100k particles at 60fps** via WebGL2 instanced rendering.
+- Falls back to Canvas2D automatically when WebGL2 is unavailable (capped at ~10k particles for Canvas2D).
+- Use `Float32Array` with stride 4 (`[x, y, vx, vy]` per particle). Pre-allocate at your maximum particle count to avoid GC pressure.
+- Trail effects use a fullscreen fade overlay. Set `trailAlpha` between 0.02 (long trails) and 0.15 (short trails).
+
+### Force graphs
+
+- **SVG mode for fewer than 500 nodes**, Canvas2D mode for 500+ nodes. ForceGraph switches automatically based on `canvasThreshold`.
+- Set `canvasThreshold` to match your expected node count for best performance.
+- Use `alphaDecay` to control how quickly the layout stabilizes. Higher values settle faster but may produce less optimal layouts.
+
+### Tick function performance
+
+- **Keep your tick function under 2ms.** The rAF loop runs at 60fps, leaving ~16ms per frame. The tick function shares this budget with rendering.
+- Avoid allocating large arrays every tick. Pre-allocate buffers and swap them (double-buffer pattern).
+- Return new top-level objects but reuse unchanged sub-objects:
+
+```typescript
+// Good: new top-level, reuse unchanged sub-objects
+return { ...entities, grid: newGrid };
+
+// Bad: deep clone everything
+return JSON.parse(JSON.stringify(entities));
+```
+
+### React re-renders
+
+- Use **granular selectors** with `useSimulation`:
+
+```typescript
+// Good: subscribe to one value
+const tick = useSimulation(s => s.tick);
+
+// Bad: subscribe to entire store (re-renders on every tick)
+const everything = useSimulation(s => s);
+```
+
+- Use `useShallow` for object selectors (already built into `useSimulation`).
+- For data components, prefer `useTick()`, `useIsRunning()`, `useSpeed()` convenience hooks over manual selectors when subscribing to a single value.
+
+### rAF loop architecture
+
+- The tick loop runs in Zustand's vanilla API **outside React**. Components subscribe to specific store slices and only re-render when their selected values change.
+- MiniChart uses an rAF gate to batch updates and avoid degrading the tick loop.
+- Avoid subscribing to `entities` directly in React components. Instead, derive the values you need in the selector:
+
+```typescript
+// Good: derive in selector
+const population = useSimulation(s => (s.entities as MyState).stats.population);
+
+// Bad: subscribe to entire entities, derive in render
+const entities = useSimulation(s => s.entities);
+const population = (entities as MyState).stats.population; // re-renders on every tick
+```
+
+## License
+
+MIT
